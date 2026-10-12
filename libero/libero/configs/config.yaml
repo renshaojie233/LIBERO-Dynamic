@@ -1,0 +1,5 @@
+benchmark_root: ..
+bddl_files: ../bddl_files
+init_states: ../init_files
+datasets: ../../datasets
+assets: ../assets

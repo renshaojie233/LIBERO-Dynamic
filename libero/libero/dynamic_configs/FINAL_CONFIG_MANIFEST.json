@@ -1,0 +1,40 @@
+{
+  "name": "LIBERO-Dynamic 600 manually reviewed release candidate",
+  "date": "2026-05-31",
+  "variants": {
+    "levels": 3,
+    "tasks": 40,
+    "trajectories_per_task": 5,
+    "total": 600
+  },
+  "review": {
+    "no_policy_preview_videos": 600,
+    "issue_export_count": 0
+  },
+  "files": {
+    "libero_dynamic_l1.yaml": {
+      "sha256": "9d5f095af9fa14f1485f1adeacabe593a0c7d2e3d32c7440092d8ece5b3dc270",
+      "bytes": 1445434
+    },
+    "libero_dynamic_l2.yaml": {
+      "sha256": "ed98d30dfae8f55ece871e11e28fa1d8e1c4614017055fb87166749ca752c967",
+      "bytes": 1631477
+    },
+    "libero_dynamic_l3.yaml": {
+      "sha256": "2710774573a860db96bdbe1126d85353523bdf89456efdda19ed03d0b5843a95",
+      "bytes": 1756848
+    },
+    "manual_plans_120base_5traj_final_20260525.json": {
+      "sha256": "e469267d087356494e5e827cb1bd2bfc9b7d0a37c3236a6bae0b46c39f5bf07b",
+      "bytes": 2792837
+    },
+    "manual_plans_problem19_relabel_20260530.json": {
+      "sha256": "60f1567bdfa66afaa162d14d8486f917726f76121f99720f8c35bbc3f372bcaa",
+      "bytes": 63959
+    },
+    "manual_plans_final_relabel_few_issues8_20260531.json": {
+      "sha256": "03e7293e7db9abd6a4dd2551a2de0c03a6afbe9f38db31cafd4cffe328a9a180",
+      "bytes": 34614
+    }
+  }
+}

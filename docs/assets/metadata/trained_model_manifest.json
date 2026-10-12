@@ -1,0 +1,51 @@
+{
+  "schema": "libero_dynamic_trained_model_video_examples_v1",
+  "scope": "Successful LIBERO-Dynamic evaluation rollouts after fine-tuning with strict non-benchmark dynamic data.",
+  "record_count": 2,
+  "records": [
+    {
+      "sequence": 1,
+      "model": "π0.5",
+      "training": "Dynamic + static fine-tuning",
+      "protocol": "Async",
+      "k": 4,
+      "frozen_latency_ms": 60.29443149964209,
+      "task": "Turn on the stove and place the moka pot",
+      "task_id": "L10-03",
+      "speed_mps": 0.09,
+      "success": true,
+      "source_file": "pi05_mixed_k4_L10-03_speed009_success_simulation_60fps.mp4",
+      "package_file": "assets/videos/trained_models/01_pi05_dynamic_static_ft_async_k4_latency60ms.mp4",
+      "sha256": "74e69d122ac03de02d1db19eea9ccf95f33a29823695819a036e82dcf608e4cc",
+      "codec": "h264",
+      "width": 512,
+      "height": 256,
+      "fps": 60.0,
+      "frame_count": 897,
+      "duration_seconds": 14.95,
+      "size_bytes": 376069
+    },
+    {
+      "sequence": 2,
+      "model": "History FastWAM-Joint",
+      "training": "Dynamic fine-tuning",
+      "protocol": "Async",
+      "k": 8,
+      "frozen_latency_ms": 89.2,
+      "task": "Put the bowl on the stove",
+      "task_id": "Go-02",
+      "speed_mps": 0.09,
+      "success": true,
+      "source_file": "history_joint_k8_Go-02_speed009_success_simulation_60fps.mp4",
+      "package_file": "assets/videos/trained_models/02_history_fastwam_dynamic_ft_async_k8_latency89ms.mp4",
+      "sha256": "e5f8946740db6b63390ca2db1e1856c06e484850e4cc1359b3f6fd7f641bc72a",
+      "codec": "h264",
+      "width": 512,
+      "height": 256,
+      "fps": 60.0,
+      "frame_count": 249,
+      "duration_seconds": 4.15,
+      "size_bytes": 78766
+    }
+  ]
+}

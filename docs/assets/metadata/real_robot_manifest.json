@@ -1,0 +1,157 @@
+{
+  "schema": "libero_dynamic_real_robot_video_examples_v1",
+  "source_note": "Only successful trials supplied for the supplementary material.",
+  "task_count": 4,
+  "clip_count": 8,
+  "transcode": "H.264, original aspect ratio, max width 960 px, CRF 24, no color grading",
+  "tasks": [
+    {
+      "task_sequence": 1,
+      "task_key": "conveyor_apple",
+      "task_title": "Conveyor-Belt Apple Pick-and-Place",
+      "success": true,
+      "clip_count": 2,
+      "clips": [
+        {
+          "clip_sequence": 1,
+          "source_filename": "conveyor_apple_success_01.mp4",
+          "source_sha256": "93e9f452b92f1d9083153c92e3147cab885dadb1874184dce66a94e1757e4339",
+          "package_file": "assets/videos/real_robot/01_conveyor_apple_trial_01.mp4",
+          "sha256": "9338d88eb538f54e1664fb5adf224a50145902c19e558e02c650337a3fabf9b0",
+          "codec": "h264",
+          "width": 960,
+          "height": 732,
+          "fps": 30.0,
+          "frame_count": 648,
+          "duration_seconds": 21.6,
+          "size_bytes": 944698
+        },
+        {
+          "clip_sequence": 2,
+          "source_filename": "conveyor_apple_success_02.mp4",
+          "source_sha256": "68255ba87fec51c4c7282e88bcf59f8c6d91df9c3a6c618730282a27afc814ff",
+          "package_file": "assets/videos/real_robot/01_conveyor_apple_trial_02.mp4",
+          "sha256": "a4b54ff97d5f25944a69e7ea78a368dab2ada149ddb9b2f0c657efa0eda1ed76",
+          "codec": "h264",
+          "width": 960,
+          "height": 732,
+          "fps": 30.0,
+          "frame_count": 1650,
+          "duration_seconds": 55.0,
+          "size_bytes": 2340003
+        }
+      ]
+    },
+    {
+      "task_sequence": 2,
+      "task_key": "zigzag_cart_apple",
+      "task_title": "Zigzag Cart Apple Pick-and-Place",
+      "success": true,
+      "clip_count": 3,
+      "clips": [
+        {
+          "clip_sequence": 1,
+          "source_filename": "new_zigzag_apple_success_01.mp4",
+          "source_sha256": "c086d8576a3e7d9ad909ba60657bdd83ba740d1e7204eddf43da30dd3f4f971e",
+          "package_file": "assets/videos/real_robot/02_zigzag_cart_apple_trial_01.mp4",
+          "sha256": "ea560243e2e3d04e4d34bd9fabac0d1908109164c7dbce859dfce5b625e26e41",
+          "codec": "h264",
+          "width": 960,
+          "height": 732,
+          "fps": 30.0,
+          "frame_count": 330,
+          "duration_seconds": 11.0,
+          "size_bytes": 710134
+        },
+        {
+          "clip_sequence": 2,
+          "source_filename": "new_zigzag_apple_success_02.mp4",
+          "source_sha256": "fd880d731d7241c538a9ea9355705a02837c724036d5363b51d1385296950d19",
+          "package_file": "assets/videos/real_robot/02_zigzag_cart_apple_trial_02.mp4",
+          "sha256": "7b20eee30cc58f406bd363e3dae1ac57c008a0483be02aab5a693c2be22138d3",
+          "codec": "h264",
+          "width": 960,
+          "height": 732,
+          "fps": 30.0,
+          "frame_count": 300,
+          "duration_seconds": 10.0,
+          "size_bytes": 613843
+        },
+        {
+          "clip_sequence": 3,
+          "source_filename": "new_zigzag_apple_success_03.mp4",
+          "source_sha256": "e42fbd71074f50a775f2b650e7700c302f7fdd7bdfc549dc880f65c7bbd50cb1",
+          "package_file": "assets/videos/real_robot/02_zigzag_cart_apple_trial_03.mp4",
+          "sha256": "db408cbb7629e774c9b58cdc33157699eefa7e487cb3bd900b4d815d42946558",
+          "codec": "h264",
+          "width": 960,
+          "height": 732,
+          "fps": 30.0,
+          "frame_count": 450,
+          "duration_seconds": 15.0,
+          "size_bytes": 860292
+        }
+      ]
+    },
+    {
+      "task_sequence": 3,
+      "task_key": "curvilinear_cart_apple",
+      "task_title": "Curvilinear Cart Apple Pick-and-Place",
+      "success": true,
+      "clip_count": 2,
+      "clips": [
+        {
+          "clip_sequence": 1,
+          "source_filename": "old_curve_apple_success_01.mp4",
+          "source_sha256": "802fe7849b76005aad8da8daf1630e64b314ac87325a0dc58d019491b1d7225e",
+          "package_file": "assets/videos/real_robot/03_curvilinear_cart_apple_trial_01.mp4",
+          "sha256": "b0e477668ea0132e571f0fdce049bbde866055652fd7a30c360570b33f4119c0",
+          "codec": "h264",
+          "width": 960,
+          "height": 732,
+          "fps": 30.0,
+          "frame_count": 750,
+          "duration_seconds": 25.0,
+          "size_bytes": 1335134
+        },
+        {
+          "clip_sequence": 2,
+          "source_filename": "old_curve_apple_success_02.mp4",
+          "source_sha256": "ab0a8b8cab964f50f1c223b7bdd6a1a66bed9bbeba79860a117398d366fdd070",
+          "package_file": "assets/videos/real_robot/03_curvilinear_cart_apple_trial_02.mp4",
+          "sha256": "8f6a24ff672556a4ea64a1acf61ec690e45cd0a7f298511eda23a57173f18249",
+          "codec": "h264",
+          "width": 960,
+          "height": 732,
+          "fps": 30.0,
+          "frame_count": 630,
+          "duration_seconds": 21.0,
+          "size_bytes": 1163982
+        }
+      ]
+    },
+    {
+      "task_sequence": 4,
+      "task_key": "dynamic_mole_hitting",
+      "task_title": "Dynamic Mole Hitting",
+      "success": true,
+      "clip_count": 1,
+      "clips": [
+        {
+          "clip_sequence": 1,
+          "source_filename": "hit_the_mole_success_01.mp4",
+          "source_sha256": "1e1ab3ad29732460a1fae4316560e4b11bba51141d1ae3bdcf8744952c53683d",
+          "package_file": "assets/videos/real_robot/04_dynamic_mole_hitting_trial_01.mp4",
+          "sha256": "52cd11107628c72e86aa52a9f926fca0b049e97207d29f0308643dfdc750e972",
+          "codec": "h264",
+          "width": 960,
+          "height": 732,
+          "fps": 15.0,
+          "frame_count": 360,
+          "duration_seconds": 24.0,
+          "size_bytes": 868593
+        }
+      ]
+    }
+  ]
+}

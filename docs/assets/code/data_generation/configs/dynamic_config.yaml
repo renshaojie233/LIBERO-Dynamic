@@ -1,0 +1,23 @@
+enabled: false
+perturb_type: none
+
+
+target_selection:
+  mode: manual_then_language
+  on_target_not_found: fail
+
+mid_episode_shift:
+  trigger_step: 80
+  delta_xyz: [0.05, 0.0, 0.0]
+
+latency_drift:
+  latency_source: auto
+  fixed_latency_seconds: 0.2
+  velocity_xyz_mps: [0.05, 0.0, 0.0]
+  max_cumulative_shift_m: 0.10
+
+targets:
+  libero_spatial:
+    0:
+      target_object_name: plate_1
+      target_joint_name: plate_1_joint0

@@ -1,0 +1,7 @@
+model,k_star,speed_003_successes,speed_003_episodes,speed_003_sr_percent,speed_006_successes,speed_006_episodes,speed_006_sr_percent,speed_009_successes,speed_009_episodes,speed_009_sr_percent,all_successes,all_episodes,all_sr_percent
+Pi0.5 JAX,4,389,600,64.8333,345,600,57.5,307,600,51.1667,1041,1800,57.8333
+FastWAM-Joint,8,296,600,49.3333,237,600,39.5,198,600,33.0,731,1800,40.6111
+VLA-JEPA,4,246,600,41.0,225,600,37.5,172,600,28.6667,643,1800,35.7222
+FastWAM,8,205,600,34.1667,195,600,32.5,177,600,29.5,577,1800,32.0556
+Pi0 JAX,8,217,600,36.1667,196,600,32.6667,154,600,25.6667,567,1800,31.5
+OpenVLA-OFT,4,206,600,34.3333,161,600,26.8333,124,600,20.6667,491,1800,27.2778

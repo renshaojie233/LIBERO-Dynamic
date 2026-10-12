@@ -1,0 +1,105 @@
+{
+  "schema": "libero_dynamic_data_generation_source_bundle_v1",
+  "scope": "Release-side generator, split auditor, direct support scripts, and reviewed trajectory configurations.",
+  "file_count": 14,
+  "files": [
+    {
+      "repository_path": "supplementary/libero_dynamic_evaluation/data_generation/generate_dynamic_demos.py",
+      "package_file": "assets/code/data_generation/generate_dynamic_demos.py",
+      "role": "Primary dynamic-demonstration generator and strict episode validator.",
+      "size_bytes": 237133,
+      "sha256": "d34de8185e5d7b8208770d1f43e7e6e4faf441aa6432b754518ae3ccbc4120cd"
+    },
+    {
+      "repository_path": "supplementary/libero_dynamic_evaluation/data_generation/build_phase_partition.py",
+      "package_file": "assets/code/data_generation/build_phase_partition.py",
+      "role": "Audits and reconstructs the benchmark/non-benchmark phase partitions.",
+      "size_bytes": 11391,
+      "sha256": "db72d8c6a7b2b73b651c4f9da12f39810c663a4d36cf49ebd752e73a086d3bcf"
+    },
+    {
+      "repository_path": "supplementary/libero_dynamic_evaluation/data_generation/README.md",
+      "package_file": "assets/code/data_generation/REFERENCE_README.md",
+      "role": "Reference notes distributed with the release-side generator.",
+      "size_bytes": 1661,
+      "sha256": "35b8eb3574fd7f423fcf9a98aa765ed94de19c35309926dda058a49a2e978c4e"
+    },
+    {
+      "repository_path": "scripts/eval_dynamic_dummy_policy.py",
+      "package_file": "assets/code/data_generation/support/eval_dynamic_dummy_policy.py",
+      "role": "Canonical condition enumeration and shared diagnostics.",
+      "size_bytes": 33995,
+      "sha256": "499d13bdbe44407a3b22c4977c7d130f4e7c925882bb4c0c9330d5525a0a629a"
+    },
+    {
+      "repository_path": "scripts/eval_dynamic_libero_style.py",
+      "package_file": "assets/code/data_generation/support/eval_dynamic_libero_style.py",
+      "role": "Environment construction, physical diagnostics, and rollout utilities.",
+      "size_bytes": 58325,
+      "sha256": "7c978dbaa4f52e224c9b38becee5a1a0f945757df68eea1185fc3488704d195a"
+    },
+    {
+      "repository_path": "scripts/render_dynamic_config_previews.py",
+      "package_file": "assets/code/data_generation/support/render_dynamic_config_previews.py",
+      "role": "Physical object-motion implementation shared by previews and generation.",
+      "size_bytes": 133576,
+      "sha256": "3efd58bc5506461abf1bb96f4715e0a530ea6e072004d65b680534bd1fdd57fe"
+    },
+    {
+      "repository_path": "scripts/dynamic_motion_invariants.py",
+      "package_file": "assets/code/data_generation/support/dynamic_motion_invariants.py",
+      "role": "Fail-fast protection against cross-family L1/L2/L3 motion overrides.",
+      "size_bytes": 5442,
+      "sha256": "c064e4d821e2348006274fb78a4e5ea215844b1f5307487e49f6d1f71b283a1c"
+    },
+    {
+      "repository_path": "scripts/rebuild_dynamic_configs_from_manual_json.py",
+      "package_file": "assets/code/data_generation/support/rebuild_dynamic_configs_from_manual_json.py",
+      "role": "Rebuilds reviewed configs while synchronizing compatibility motion replicas.",
+      "size_bytes": 11257,
+      "sha256": "d5d8f662750186e9fcf9099ce6156e45c661ac0bd5793ad4cdff7a893f34b541"
+    },
+    {
+      "repository_path": "libero/libero/dynamic_config.yaml",
+      "package_file": "assets/code/data_generation/configs/dynamic_config.yaml",
+      "role": "Top-level dynamic-environment configuration.",
+      "size_bytes": 425,
+      "sha256": "247664442206e3759f6d837ce97bbedd58eacf403e682a16500389f7fa91b2a9"
+    },
+    {
+      "repository_path": "libero/libero/dynamic_configs/libero_dynamic_l1.yaml",
+      "package_file": "assets/code/data_generation/configs/libero_dynamic_l1.yaml",
+      "role": "Reviewed L1 trajectory annotations for all 40 tasks.",
+      "size_bytes": 1402138,
+      "sha256": "491367dd5d686a105474173bfbeb7381dc282d5aa1b381aaace5eeef717a025c"
+    },
+    {
+      "repository_path": "libero/libero/dynamic_configs/libero_dynamic_l2.yaml",
+      "package_file": "assets/code/data_generation/configs/libero_dynamic_l2.yaml",
+      "role": "Reviewed L2 trajectory annotations for all 40 tasks.",
+      "size_bytes": 1590671,
+      "sha256": "e7ef6f9deb1cf29916ebc51704b1d75b751d6b0b2dc192b7587a487005fe5133"
+    },
+    {
+      "repository_path": "libero/libero/dynamic_configs/libero_dynamic_l3.yaml",
+      "package_file": "assets/code/data_generation/configs/libero_dynamic_l3.yaml",
+      "role": "Reviewed L3 trajectory annotations for all 40 tasks.",
+      "size_bytes": 1714410,
+      "sha256": "08492708ff91599f46a83284b2ff2c146ca28a19e459e8ccf37210aca7c1f5c6"
+    },
+    {
+      "repository_path": "supplementary/libero_dynamic_evaluation/CODE_MAP.md",
+      "package_file": "assets/code/data_generation/CODE_MAP.md",
+      "role": "Map from release files to the canonical repository implementation.",
+      "size_bytes": 4643,
+      "sha256": "603bd3c8e50a51bd682df6a17ebac979f1e7691bc1f42fe76533944e157a61e1"
+    },
+    {
+      "repository_path": null,
+      "package_file": "assets/code/data_generation/CODE_OVERVIEW.md",
+      "role": "English overview and reproducibility instructions for the packaged code.",
+      "size_bytes": 4738,
+      "sha256": "c5b067322d94febb63ff87c229b644af1897af105d1c37f69784f21db8c82d9c"
+    }
+  ]
+}

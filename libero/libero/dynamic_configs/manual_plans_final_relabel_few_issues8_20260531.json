@@ -1,0 +1,1236 @@
+{
+  "format": "libero_dynamic_manual_plan_batch",
+  "version": 1,
+  "saved_count": 8,
+  "total_count": 8,
+  "rows": [
+    {
+      "index": 0,
+      "plan_id": "libero_10_task00__l2__traj00",
+      "suite": "libero_10",
+      "task_id": 0,
+      "variant_id": "libero_10_task00__l2__traj00",
+      "motion_type": "polynomial_spline",
+      "target_names": [
+        "alphabet_soup_1",
+        "tomato_sauce_1",
+        "basket_1"
+      ],
+      "plan": {
+        "editor_version": 1,
+        "suite": "libero_10",
+        "task_id": 0,
+        "init_state_id": 0,
+        "language": "put both the alphabet soup and the tomato sauce in the basket  [libero_10_task00__l2__traj00]",
+        "target_object": "alphabet_soup_1",
+        "active_target_object": "tomato_sauce_1",
+        "target_objects": [
+          {
+            "target_object": "alphabet_soup_1",
+            "target_joint_name": "alphabet_soup_1_joint0",
+            "waypoints_xy": [
+              [
+                -0.09323705973734753,
+                -0.15979727968565927
+              ],
+              [
+                -0.11482460289966467,
+                -0.26677586902814987
+              ],
+              [
+                -0.16640396229311527,
+                -0.15045029532843612
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          },
+          {
+            "target_object": "tomato_sauce_1",
+            "target_joint_name": "tomato_sauce_1_joint0",
+            "waypoints_xy": [
+              [
+                -0.16271136007864673,
+                -0.05487036860557326
+              ],
+              [
+                -0.0859726917287047,
+                0.01475585117754874
+              ],
+              [
+                -0.2505726805861128,
+                0.038298854317550646
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          },
+          {
+            "target_object": "basket_1",
+            "target_joint_name": "basket_1_joint0",
+            "waypoints_xy": [
+              [
+                0.04266611036934109,
+                0.1569586598088515
+              ],
+              [
+                0.0012510776287792957,
+                0.255859672608052
+              ],
+              [
+                -0.09813556777510368,
+                0.2705679183839147
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          }
+        ],
+        "motion_type": "polynomial_spline",
+        "closed_loop": true,
+        "alpha_mps": 0.055,
+        "z_motion": {
+          "type": "none",
+          "amplitude_m": 0
+        },
+        "objects": {
+          "alphabet_soup_1": {
+            "xy": [
+              -0.09323705973734753,
+              -0.15979727968565927
+            ],
+            "yaw_rad": -3.141590837131203,
+            "original_xy": [
+              -0.10016028776430774,
+              -0.15201577009385475
+            ],
+            "original_yaw_rad": -3.141590837131203
+          },
+          "cream_cheese_1": {
+            "xy": [
+              0.09251251087862156,
+              -0.19322919702012398
+            ],
+            "yaw_rad": 3.141592653589793,
+            "original_xy": [
+              0.07851475615653067,
+              -0.19384593250156518
+            ],
+            "original_yaw_rad": 3.141592653589793
+          },
+          "tomato_sauce_1": {
+            "xy": [
+              -0.16271136007864673,
+              -0.05487036860557326
+            ],
+            "yaw_rad": 3.1415906158673836,
+            "original_xy": [
+              -0.11728698342501184,
+              0.05574799100402435
+            ],
+            "original_yaw_rad": 3.1415906158673836
+          },
+          "ketchup_1": {
+            "xy": [
+              -0.2816514854070855,
+              -0.15118975879837948
+            ],
+            "yaw_rad": 1.5707962788925498,
+            "original_xy": [
+              -0.26846343153481145,
+              -0.14860774273547883
+            ],
+            "original_yaw_rad": 1.5707962788925498
+          },
+          "orange_juice_1": {
+            "xy": [
+              0.008073892355560552,
+              -0.2730856002170692
+            ],
+            "yaw_rad": 1.570796325656201,
+            "original_xy": [
+              0.009968369468075652,
+              -0.259226312323231
+            ],
+            "original_yaw_rad": 1.570796325656201
+          },
+          "milk_1": {
+            "xy": [
+              0.055968053463408385,
+              -0.082813498014922
+            ],
+            "yaw_rad": 1.5707963256562052,
+            "original_xy": [
+              0.049270067238413824,
+              -0.12142244544447033
+            ],
+            "original_yaw_rad": 1.5707963256562052
+          },
+          "butter_1": {
+            "xy": [
+              0.07044719834440541,
+              0.0526561777194373
+            ],
+            "yaw_rad": -3.141592653589793,
+            "original_xy": [
+              0.07044719834440541,
+              0.0526561777194373
+            ],
+            "original_yaw_rad": -3.141592653589793
+          },
+          "basket_1": {
+            "xy": [
+              0.04266611036934109,
+              0.1569586598088515
+            ],
+            "yaw_rad": 1.570796328835829,
+            "original_xy": [
+              -0.002115505034913709,
+              0.268997878707202
+            ],
+            "original_yaw_rad": 1.570796328835829
+          }
+        },
+        "waypoints_xy": [
+          [
+            -0.09323705973734753,
+            -0.15979727968565927
+          ],
+          [
+            -0.11482460289966467,
+            -0.26677586902814987
+          ],
+          [
+            -0.16640396229311527,
+            -0.15045029532843612
+          ]
+        ],
+        "background_image": "libero_10_task0_birdview_clean_image.png"
+      }
+    },
+    {
+      "index": 1,
+      "plan_id": "libero_10_task00__l2__traj01",
+      "suite": "libero_10",
+      "task_id": 0,
+      "variant_id": "libero_10_task00__l2__traj01",
+      "motion_type": "polynomial_spline",
+      "target_names": [
+        "alphabet_soup_1",
+        "tomato_sauce_1",
+        "basket_1"
+      ],
+      "plan": {
+        "editor_version": 1,
+        "suite": "libero_10",
+        "task_id": 0,
+        "init_state_id": 0,
+        "language": "put both the alphabet soup and the tomato sauce in the basket  [libero_10_task00__l2__traj01]",
+        "target_object": "alphabet_soup_1",
+        "active_target_object": "basket_1",
+        "target_objects": [
+          {
+            "target_object": "alphabet_soup_1",
+            "target_joint_name": "alphabet_soup_1_joint0",
+            "waypoints_xy": [
+              [
+                -0.10016028776430774,
+                -0.15201577009385475
+              ],
+              [
+                -0.1421076851470522,
+                -0.34781589783020256
+              ],
+              [
+                -0.17691286793484462,
+                -0.12981057473496033
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          },
+          {
+            "target_object": "tomato_sauce_1",
+            "target_joint_name": "tomato_sauce_1_joint0",
+            "waypoints_xy": [
+              [
+                -0.08146520121778811,
+                -0.01168623040154082
+              ],
+              [
+                -0.09549834990518691,
+                0.1100867919966364
+              ],
+              [
+                -0.22861641228139162,
+                0.11625970712044698
+              ],
+              [
+                -0.22075301186894603,
+                -0.020349831876669278
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          },
+          {
+            "target_object": "basket_1",
+            "target_joint_name": "basket_1_joint0",
+            "waypoints_xy": [
+              [
+                -0.11060071514235759,
+                0.2547030905984491
+              ],
+              [
+                0.02365349441643927,
+                0.23875970163411875
+              ],
+              [
+                0.016598241578733353,
+                0.2701869444679974
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          }
+        ],
+        "motion_type": "polynomial_spline",
+        "closed_loop": true,
+        "alpha_mps": 0.055,
+        "z_motion": {
+          "type": "none",
+          "amplitude_m": 0
+        },
+        "objects": {
+          "alphabet_soup_1": {
+            "xy": [
+              -0.10016028776430774,
+              -0.15201577009385475
+            ],
+            "yaw_rad": -3.141590837131203,
+            "original_xy": [
+              -0.10016028776430774,
+              -0.15201577009385475
+            ],
+            "original_yaw_rad": -3.141590837131203
+          },
+          "cream_cheese_1": {
+            "xy": [
+              0.07851475615653067,
+              -0.19384593250156518
+            ],
+            "yaw_rad": 3.141592653589793,
+            "original_xy": [
+              0.07851475615653067,
+              -0.19384593250156518
+            ],
+            "original_yaw_rad": 3.141592653589793
+          },
+          "tomato_sauce_1": {
+            "xy": [
+              -0.08146520121778811,
+              -0.01168623040154082
+            ],
+            "yaw_rad": 3.1415906158673836,
+            "original_xy": [
+              -0.11728698342501184,
+              0.05574799100402435
+            ],
+            "original_yaw_rad": 3.1415906158673836
+          },
+          "ketchup_1": {
+            "xy": [
+              -0.26846343153481145,
+              -0.14860774273547883
+            ],
+            "yaw_rad": 1.5707962788925498,
+            "original_xy": [
+              -0.26846343153481145,
+              -0.14860774273547883
+            ],
+            "original_yaw_rad": 1.5707962788925498
+          },
+          "orange_juice_1": {
+            "xy": [
+              0.009968369468075652,
+              -0.259226312323231
+            ],
+            "yaw_rad": 1.570796325656201,
+            "original_xy": [
+              0.009968369468075652,
+              -0.259226312323231
+            ],
+            "original_yaw_rad": 1.570796325656201
+          },
+          "milk_1": {
+            "xy": [
+              0.049270067238413824,
+              -0.12142244544447033
+            ],
+            "yaw_rad": 1.5707963256562052,
+            "original_xy": [
+              0.049270067238413824,
+              -0.12142244544447033
+            ],
+            "original_yaw_rad": 1.5707963256562052
+          },
+          "butter_1": {
+            "xy": [
+              0.07044719834440541,
+              0.0526561777194373
+            ],
+            "yaw_rad": -3.141592653589793,
+            "original_xy": [
+              0.07044719834440541,
+              0.0526561777194373
+            ],
+            "original_yaw_rad": -3.141592653589793
+          },
+          "basket_1": {
+            "xy": [
+              -0.11060071514235759,
+              0.2547030905984491
+            ],
+            "yaw_rad": 1.570796328835829,
+            "original_xy": [
+              -0.002115505034913709,
+              0.268997878707202
+            ],
+            "original_yaw_rad": 1.570796328835829
+          }
+        },
+        "waypoints_xy": [
+          [
+            -0.10016028776430774,
+            -0.15201577009385475
+          ],
+          [
+            -0.1421076851470522,
+            -0.34781589783020256
+          ],
+          [
+            -0.17691286793484462,
+            -0.12981057473496033
+          ]
+        ],
+        "background_image": "libero_10_task0_birdview_clean_image.png"
+      }
+    },
+    {
+      "index": 2,
+      "plan_id": "libero_10_task01__l2__traj02",
+      "suite": "libero_10",
+      "task_id": 1,
+      "variant_id": "libero_10_task01__l2__traj02",
+      "motion_type": "polynomial_spline",
+      "target_names": [
+        "cream_cheese_1",
+        "butter_1",
+        "basket_1"
+      ],
+      "plan": {
+        "editor_version": 1,
+        "suite": "libero_10",
+        "task_id": 1,
+        "init_state_id": 0,
+        "language": "put both the cream cheese box and the butter in the basket  [libero_10_task01__l2__traj02]",
+        "target_object": "cream_cheese_1",
+        "active_target_object": "butter_1",
+        "target_objects": [
+          {
+            "target_object": "cream_cheese_1",
+            "target_joint_name": "cream_cheese_1_joint0",
+            "waypoints_xy": [
+              [
+                0.010201537826464602,
+                -0.04715053853526352
+              ],
+              [
+                0.09340273348057493,
+                -0.17027313192225435
+              ],
+              [
+                -0.07188428918853806,
+                -0.10897552030808688
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          },
+          {
+            "target_object": "butter_1",
+            "target_joint_name": "butter_1_joint0",
+            "waypoints_xy": [
+              [
+                0.02606461687326367,
+                0.057091640318047476
+              ],
+              [
+                -0.19778666552186852,
+                -0.015257534069625045
+              ],
+              [
+                -0.14229859744277618,
+                0.08678589912501877
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          },
+          {
+            "target_object": "basket_1",
+            "target_joint_name": "basket_1_joint0",
+            "waypoints_xy": [
+              [
+                0.06669965211864737,
+                0.22778175307268023
+              ],
+              [
+                0.017935580429183196,
+                0.2837420796037182
+              ],
+              [
+                -0.06914945220442181,
+                0.27000748252592666
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          }
+        ],
+        "motion_type": "polynomial_spline",
+        "closed_loop": true,
+        "alpha_mps": 0.055,
+        "z_motion": {
+          "type": "none",
+          "amplitude_m": 0
+        },
+        "objects": {
+          "alphabet_soup_1": {
+            "xy": [
+              -0.1471751391658267,
+              -0.20367926568467198
+            ],
+            "yaw_rad": -3.141590837131203,
+            "original_xy": [
+              -0.10158648007183808,
+              -0.14950580268472305
+            ],
+            "original_yaw_rad": -3.141590837131203
+          },
+          "cream_cheese_1": {
+            "xy": [
+              0.010201537826464602,
+              -0.04715053853526352
+            ],
+            "yaw_rad": -3.141592653589793,
+            "original_xy": [
+              0.09910931425692633,
+              -0.18146601062546336
+            ],
+            "original_yaw_rad": -3.141592653589793
+          },
+          "tomato_sauce_1": {
+            "xy": [
+              -0.30069530127446176,
+              0.12047602772745813
+            ],
+            "yaw_rad": 3.1415906158686293,
+            "original_xy": [
+              -0.08823054658776658,
+              0.0712303225586486
+            ],
+            "original_yaw_rad": 3.1415906158686293
+          },
+          "ketchup_1": {
+            "xy": [
+              -0.2608126339271796,
+              -0.15669746111411814
+            ],
+            "yaw_rad": 1.5707962788925498,
+            "original_xy": [
+              -0.2608126339271796,
+              -0.15669746111411814
+            ],
+            "original_yaw_rad": 1.5707962788925498
+          },
+          "orange_juice_1": {
+            "xy": [
+              -0.01843676329067264,
+              -0.25555519385039793
+            ],
+            "yaw_rad": 1.570796325656201,
+            "original_xy": [
+              -0.01843676329067264,
+              -0.25555519385039793
+            ],
+            "original_yaw_rad": 1.570796325656201
+          },
+          "milk_1": {
+            "xy": [
+              0.1255426573596481,
+              -0.030398358549111992
+            ],
+            "yaw_rad": 1.5707963256562052,
+            "original_xy": [
+              0.0666565507217176,
+              -0.10473237981438549
+            ],
+            "original_yaw_rad": 1.5707963256562052
+          },
+          "butter_1": {
+            "xy": [
+              0.02606461687326367,
+              0.057091640318047476
+            ],
+            "yaw_rad": -3.141592653589793,
+            "original_xy": [
+              0.0489602377124352,
+              0.05760379687259051
+            ],
+            "original_yaw_rad": -3.141592653589793
+          },
+          "basket_1": {
+            "xy": [
+              0.06669965211864737,
+              0.22778175307268023
+            ],
+            "yaw_rad": 1.570796328835829,
+            "original_xy": [
+              0.007047696719216703,
+              0.2646539007899064
+            ],
+            "original_yaw_rad": 1.570796328835829
+          }
+        },
+        "waypoints_xy": [
+          [
+            0.010201537826464602,
+            -0.04715053853526352
+          ],
+          [
+            0.09340273348057493,
+            -0.17027313192225435
+          ],
+          [
+            -0.07188428918853806,
+            -0.10897552030808688
+          ]
+        ],
+        "background_image": "libero_10_task1_birdview_clean_image.png"
+      }
+    },
+    {
+      "index": 3,
+      "plan_id": "libero_10_task05__l2__traj04",
+      "suite": "libero_10",
+      "task_id": 5,
+      "variant_id": "libero_10_task05__l2__traj04",
+      "motion_type": "polynomial_spline",
+      "target_names": [
+        "black_book_1"
+      ],
+      "plan": {
+        "editor_version": 1,
+        "suite": "libero_10",
+        "task_id": 5,
+        "init_state_id": 0,
+        "language": "pick up the book and place it in the back compartment of the caddy  [libero_10_task05__l2__traj04]",
+        "target_object": "black_book_1",
+        "active_target_object": "black_book_1",
+        "target_objects": [
+          {
+            "target_object": "black_book_1",
+            "target_joint_name": "black_book_1_joint0",
+            "waypoints_xy": [
+              [
+                -0.13023440536982878,
+                0.0934119303711074
+              ],
+              [
+                -0.34700180575354933,
+                0.06386800251917135
+              ],
+              [
+                -0.1740045300581179,
+                -0.1251466946257893
+              ]
+            ],
+            "motion_type": "polynomial_spline",
+            "closed_loop": true,
+            "alpha_mps": 0.055,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          }
+        ],
+        "motion_type": "polynomial_spline",
+        "closed_loop": true,
+        "alpha_mps": 0.055,
+        "z_motion": {
+          "type": "none",
+          "amplitude_m": 0
+        },
+        "objects": {
+          "black_book_1": {
+            "xy": [
+              -0.13023440536982878,
+              0.0934119303711074
+            ],
+            "yaw_rad": -2.276862036254923,
+            "original_xy": [
+              -0.21013120537865834,
+              0.16370999342054987
+            ],
+            "original_yaw_rad": -2.276862036254923
+          },
+          "white_yellow_mug_1": {
+            "xy": [
+              0.1569545132658734,
+              -0.09822694272258659
+            ],
+            "yaw_rad": -1.5707969095420409,
+            "original_xy": [
+              -0.11516817141728937,
+              0.0035846791696868834
+            ],
+            "original_yaw_rad": -1.5707969095420409
+          }
+        },
+        "waypoints_xy": [
+          [
+            -0.13023440536982878,
+            0.0934119303711074
+          ],
+          [
+            -0.34700180575354933,
+            0.06386800251917135
+          ],
+          [
+            -0.1740045300581179,
+            -0.1251466946257893
+          ]
+        ],
+        "background_image": "libero_10_task5_birdview_clean_image.png"
+      }
+    },
+    {
+      "index": 4,
+      "plan_id": "libero_10_task05__l3__traj03",
+      "suite": "libero_10",
+      "task_id": 5,
+      "variant_id": "libero_10_task05__l3__traj03",
+      "motion_type": "zigzag_waypoints",
+      "target_names": [
+        "black_book_1"
+      ],
+      "plan": {
+        "editor_version": 1,
+        "suite": "libero_10",
+        "task_id": 5,
+        "init_state_id": 0,
+        "language": "pick up the book and place it in the back compartment of the caddy  [libero_10_task05__l3__traj03]",
+        "target_object": "black_book_1",
+        "active_target_object": "black_book_1",
+        "target_objects": [
+          {
+            "target_object": "black_book_1",
+            "target_joint_name": "black_book_1_joint0",
+            "waypoints_xy": [
+              [
+                -0.03368309272008618,
+                0.081075439006002
+              ],
+              [
+                -0.334441513520352,
+                -0.003489504358024975
+              ],
+              [
+                -0.1372714589349524,
+                -0.13058030869148263
+              ],
+              [
+                -0.27542447697996986,
+                0.11813122864337522
+              ]
+            ],
+            "motion_type": "zigzag_waypoints",
+            "closed_loop": true,
+            "alpha_mps": 0.06,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          }
+        ],
+        "motion_type": "zigzag_waypoints",
+        "closed_loop": true,
+        "alpha_mps": 0.06,
+        "z_motion": {
+          "type": "none",
+          "amplitude_m": 0
+        },
+        "objects": {
+          "black_book_1": {
+            "xy": [
+              -0.03368309272008618,
+              0.081075439006002
+            ],
+            "yaw_rad": -2.276862036254923,
+            "original_xy": [
+              -0.21013120537865834,
+              0.16370999342054987
+            ],
+            "original_yaw_rad": -2.276862036254923
+          },
+          "white_yellow_mug_1": {
+            "xy": [
+              0.28624646746800697,
+              -0.12967371440173192
+            ],
+            "yaw_rad": -1.5707969095420409,
+            "original_xy": [
+              -0.11516817141728937,
+              0.0035846791696868834
+            ],
+            "original_yaw_rad": -1.5707969095420409
+          }
+        },
+        "waypoints_xy": [
+          [
+            -0.03368309272008618,
+            0.081075439006002
+          ],
+          [
+            -0.334441513520352,
+            -0.003489504358024975
+          ],
+          [
+            -0.1372714589349524,
+            -0.13058030869148263
+          ],
+          [
+            -0.27542447697996986,
+            0.11813122864337522
+          ]
+        ],
+        "background_image": "libero_10_task5_birdview_clean_image.png"
+      }
+    },
+    {
+      "index": 5,
+      "plan_id": "libero_10_task05__l3__traj04",
+      "suite": "libero_10",
+      "task_id": 5,
+      "variant_id": "libero_10_task05__l3__traj04",
+      "motion_type": "zigzag_waypoints",
+      "target_names": [
+        "black_book_1"
+      ],
+      "plan": {
+        "editor_version": 1,
+        "suite": "libero_10",
+        "task_id": 5,
+        "init_state_id": 0,
+        "language": "pick up the book and place it in the back compartment of the caddy  [libero_10_task05__l3__traj04]",
+        "target_object": "black_book_1",
+        "active_target_object": "black_book_1",
+        "target_objects": [
+          {
+            "target_object": "black_book_1",
+            "target_joint_name": "black_book_1_joint0",
+            "waypoints_xy": [
+              [
+                -0.20086392856698243,
+                -0.1574902023189929
+              ],
+              [
+                -0.3324094982974195,
+                0.027338424559402497
+              ],
+              [
+                -0.021122800486889304,
+                0.013717932128805344
+              ],
+              [
+                -0.23063494584016486,
+                0.1880301386608838
+              ]
+            ],
+            "motion_type": "zigzag_waypoints",
+            "closed_loop": true,
+            "alpha_mps": 0.06,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          }
+        ],
+        "motion_type": "zigzag_waypoints",
+        "closed_loop": true,
+        "alpha_mps": 0.06,
+        "z_motion": {
+          "type": "none",
+          "amplitude_m": 0
+        },
+        "objects": {
+          "black_book_1": {
+            "xy": [
+              -0.20086392856698243,
+              -0.1574902023189929
+            ],
+            "yaw_rad": -2.276862036254923,
+            "original_xy": [
+              -0.21013120537865834,
+              0.16370999342054987
+            ],
+            "original_yaw_rad": -2.276862036254923
+          },
+          "white_yellow_mug_1": {
+            "xy": [
+              0.1759040523483293,
+              -0.20933125537766983
+            ],
+            "yaw_rad": -1.5707969095420409,
+            "original_xy": [
+              -0.11516817141728937,
+              0.0035846791696868834
+            ],
+            "original_yaw_rad": -1.5707969095420409
+          }
+        },
+        "waypoints_xy": [
+          [
+            -0.20086392856698243,
+            -0.1574902023189929
+          ],
+          [
+            -0.3324094982974195,
+            0.027338424559402497
+          ],
+          [
+            -0.021122800486889304,
+            0.013717932128805344
+          ],
+          [
+            -0.23063494584016486,
+            0.1880301386608838
+          ]
+        ],
+        "background_image": "libero_10_task5_birdview_clean_image.png"
+      }
+    },
+    {
+      "index": 6,
+      "plan_id": "libero_10_task08__l3__traj01",
+      "suite": "libero_10",
+      "task_id": 8,
+      "variant_id": "libero_10_task08__l3__traj01",
+      "motion_type": "zigzag_waypoints",
+      "target_names": [
+        "moka_pot_1",
+        "moka_pot_2"
+      ],
+      "plan": {
+        "editor_version": 1,
+        "suite": "libero_10",
+        "task_id": 8,
+        "init_state_id": 0,
+        "language": "put both moka pots on the stove  [libero_10_task08__l3__traj01]",
+        "target_object": "moka_pot_1",
+        "active_target_object": "moka_pot_1",
+        "target_objects": [
+          {
+            "target_object": "moka_pot_1",
+            "target_joint_name": "moka_pot_1_joint0",
+            "waypoints_xy": [
+              [
+                0.24898877323105406,
+                0.23092157117226442
+              ],
+              [
+                0.07269967862595439,
+                0.33580957011213575
+              ],
+              [
+                0.16656327847701213,
+                0.14779893387595844
+              ],
+              [
+                0.02752306898985868,
+                0.2719116687853559
+              ]
+            ],
+            "motion_type": "zigzag_waypoints",
+            "closed_loop": true,
+            "alpha_mps": 0.06,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          },
+          {
+            "target_object": "moka_pot_2",
+            "target_joint_name": "moka_pot_2_joint0",
+            "waypoints_xy": [
+              [
+                0.05981195894057523,
+                0.044546134318321884
+              ],
+              [
+                -0.10959937295209365,
+                0.12971710415068927
+              ],
+              [
+                0.0027981367063565354,
+                -0.060631808447347724
+              ],
+              [
+                -0.15654966112501478,
+                0.09141705347633666
+              ]
+            ],
+            "motion_type": "zigzag_waypoints",
+            "closed_loop": true,
+            "alpha_mps": 0.06,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          }
+        ],
+        "motion_type": "zigzag_waypoints",
+        "closed_loop": true,
+        "alpha_mps": 0.06,
+        "z_motion": {
+          "type": "none",
+          "amplitude_m": 0
+        },
+        "objects": {
+          "moka_pot_1": {
+            "xy": [
+              0.24898877323105406,
+              0.23092157117226442
+            ],
+            "yaw_rad": -3.1415926529271054,
+            "original_xy": [
+              -0.054300781741487086,
+              0.25772989380871714
+            ],
+            "original_yaw_rad": -3.1415926529271054
+          },
+          "moka_pot_2": {
+            "xy": [
+              0.05981195894057523,
+              0.044546134318321884
+            ],
+            "yaw_rad": -3.1415926529271054,
+            "original_xy": [
+              0.04144782033013018,
+              0.04257839411041213
+            ],
+            "original_yaw_rad": -3.1415926529271054
+          }
+        },
+        "waypoints_xy": [
+          [
+            0.24898877323105406,
+            0.23092157117226442
+          ],
+          [
+            0.07269967862595439,
+            0.33580957011213575
+          ],
+          [
+            0.16656327847701213,
+            0.14779893387595844
+          ],
+          [
+            0.02752306898985868,
+            0.2719116687853559
+          ]
+        ],
+        "background_image": "libero_10_task8_birdview_clean_image.png"
+      }
+    },
+    {
+      "index": 7,
+      "plan_id": "libero_10_task08__l3__traj04",
+      "suite": "libero_10",
+      "task_id": 8,
+      "variant_id": "libero_10_task08__l3__traj04",
+      "motion_type": "zigzag_waypoints",
+      "target_names": [
+        "moka_pot_1",
+        "moka_pot_2"
+      ],
+      "plan": {
+        "editor_version": 1,
+        "suite": "libero_10",
+        "task_id": 8,
+        "init_state_id": 0,
+        "language": "put both moka pots on the stove  [libero_10_task08__l3__traj04]",
+        "target_object": "moka_pot_1",
+        "active_target_object": "moka_pot_1",
+        "target_objects": [
+          {
+            "target_object": "moka_pot_1",
+            "target_joint_name": "moka_pot_1_joint0",
+            "waypoints_xy": [
+              [
+                0.08974863319481141,
+                0.06324344650959624
+              ],
+              [
+                -0.10891154215269672,
+                0.14630472122895555
+              ],
+              [
+                0.0056217770489011,
+                -0.021839464635017736
+              ],
+              [
+                -0.14652255827696492,
+                0.07927740787293813
+              ]
+            ],
+            "motion_type": "zigzag_waypoints",
+            "closed_loop": true,
+            "alpha_mps": 0.06,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          },
+          {
+            "target_object": "moka_pot_2",
+            "target_joint_name": "moka_pot_2_joint0",
+            "waypoints_xy": [
+              [
+                0.3258757356582116,
+                0.2879189340378915
+              ],
+              [
+                0.06600298141668448,
+                0.37942788791288506
+              ],
+              [
+                0.18571270193884448,
+                0.18960639909310018
+              ],
+              [
+                0.04902525342970909,
+                0.25324948723435614
+              ]
+            ],
+            "motion_type": "zigzag_waypoints",
+            "closed_loop": true,
+            "alpha_mps": 0.06,
+            "z_motion": {
+              "type": "none",
+              "amplitude_m": 0
+            }
+          }
+        ],
+        "motion_type": "zigzag_waypoints",
+        "closed_loop": true,
+        "alpha_mps": 0.06,
+        "z_motion": {
+          "type": "none",
+          "amplitude_m": 0
+        },
+        "objects": {
+          "moka_pot_1": {
+            "xy": [
+              0.08974863319481141,
+              0.06324344650959624
+            ],
+            "yaw_rad": -3.1415926529271054,
+            "original_xy": [
+              -0.054300781741487086,
+              0.25772989380871714
+            ],
+            "original_yaw_rad": -3.1415926529271054
+          },
+          "moka_pot_2": {
+            "xy": [
+              0.3258757356582116,
+              0.2879189340378915
+            ],
+            "yaw_rad": -3.1415926529271054,
+            "original_xy": [
+              0.04144782033013018,
+              0.04257839411041213
+            ],
+            "original_yaw_rad": -3.1415926529271054
+          }
+        },
+        "waypoints_xy": [
+          [
+            0.08974863319481141,
+            0.06324344650959624
+          ],
+          [
+            -0.10891154215269672,
+            0.14630472122895555
+          ],
+          [
+            0.0056217770489011,
+            -0.021839464635017736
+          ],
+          [
+            -0.14652255827696492,
+            0.07927740787293813
+          ]
+        ],
+        "background_image": "libero_10_task8_birdview_clean_image.png"
+      }
+    }
+  ]
+}
