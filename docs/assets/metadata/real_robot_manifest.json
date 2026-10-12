@@ -14,31 +14,31 @@
       "clips": [
         {
           "clip_sequence": 1,
-          "source_filename": "conveyor_apple_success_01.mp4",
-          "source_sha256": "93e9f452b92f1d9083153c92e3147cab885dadb1874184dce66a94e1757e4339",
+          "source_filename": "20260922T085344.492746Z_history-joint-shift3-smooth__success/camera_3.mp4",
+          "source_sha256": "9242b65382fa24f1db7e146c7eae4310bfa795a2964a2b1d1dbcb4fdb4752b17",
           "package_file": "assets/videos/real_robot/01_conveyor_apple_trial_01.mp4",
-          "sha256": "9338d88eb538f54e1664fb5adf224a50145902c19e558e02c650337a3fabf9b0",
+          "sha256": "a8030b7c63d5f54146bc6c8a4a518d730f5c8e28e8027fddd24cc70a2e476e52",
           "codec": "h264",
           "width": 960,
-          "height": 732,
-          "fps": 30.0,
-          "frame_count": 648,
-          "duration_seconds": 21.6,
-          "size_bytes": 944698
+          "height": 540,
+          "fps": 15.0,
+          "frame_count": 176,
+          "duration_seconds": 11.733333,
+          "size_bytes": 400354
         },
         {
           "clip_sequence": 2,
-          "source_filename": "conveyor_apple_success_02.mp4",
-          "source_sha256": "68255ba87fec51c4c7282e88bcf59f8c6d91df9c3a6c618730282a27afc814ff",
+          "source_filename": "20260922T105900.789395Z_streamingwam-sdp-smooth__success/camera_3.mp4",
+          "source_sha256": "969c2ff343315ea35f6e513fe7b692670fbad6900232a8af38185c4c93b1fd41",
           "package_file": "assets/videos/real_robot/01_conveyor_apple_trial_02.mp4",
-          "sha256": "a4b54ff97d5f25944a69e7ea78a368dab2ada149ddb9b2f0c657efa0eda1ed76",
+          "sha256": "ad9e93ca48cfd95301712d6b20df2c4b2085fb820727fd87d7b92cb6b8e981cd",
           "codec": "h264",
           "width": 960,
-          "height": 732,
-          "fps": 30.0,
-          "frame_count": 1650,
-          "duration_seconds": 55.0,
-          "size_bytes": 2340003
+          "height": 540,
+          "fps": 15.0,
+          "frame_count": 193,
+          "duration_seconds": 12.866667,
+          "size_bytes": 476246
         }
       ]
     },
