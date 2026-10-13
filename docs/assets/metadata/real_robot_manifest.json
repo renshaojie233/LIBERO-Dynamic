@@ -14,31 +14,31 @@
       "clips": [
         {
           "clip_sequence": 1,
-          "source_filename": "20260922T085344.492746Z_history-joint-shift3-smooth__success/camera_3.mp4",
-          "source_sha256": "9242b65382fa24f1db7e146c7eae4310bfa795a2964a2b1d1dbcb4fdb4752b17",
+          "source_filename": "20260922T085344.492746Z_history-joint-shift3-smooth__success/camera_4.mp4",
+          "source_sha256": "2fb572b9c55ee257ed3d9922fd83dda734a5393d8b3ce6ae50ff6a98b8e63e83",
           "package_file": "assets/videos/real_robot/01_conveyor_apple_trial_01.mp4",
-          "sha256": "a8030b7c63d5f54146bc6c8a4a518d730f5c8e28e8027fddd24cc70a2e476e52",
+          "sha256": "8c03b64251773966eed2d6df33ca3f47e21c1cfe9c95784520a19e5e562e8b8e",
           "codec": "h264",
           "width": 960,
-          "height": 540,
-          "fps": 15.0,
-          "frame_count": 176,
-          "duration_seconds": 11.733333,
-          "size_bytes": 400354
+          "height": 732,
+          "fps": 30.0,
+          "frame_count": 353,
+          "duration_seconds": 11.766667,
+          "size_bytes": 656133
         },
         {
           "clip_sequence": 2,
-          "source_filename": "20260922T105900.789395Z_streamingwam-sdp-smooth__success/camera_3.mp4",
-          "source_sha256": "969c2ff343315ea35f6e513fe7b692670fbad6900232a8af38185c4c93b1fd41",
+          "source_filename": "20260922T105900.789395Z_streamingwam-sdp-smooth__success/camera_4.mp4",
+          "source_sha256": "3c2806360cc7835183e022df57d10e9c83ebd976295df59466df2c1945fe376a",
           "package_file": "assets/videos/real_robot/01_conveyor_apple_trial_02.mp4",
-          "sha256": "ad9e93ca48cfd95301712d6b20df2c4b2085fb820727fd87d7b92cb6b8e981cd",
+          "sha256": "fbe1a81ee9c3faf6313754a2eaf4672357f107ac5ec8a1f8aa9d47aaf176d8b1",
           "codec": "h264",
           "width": 960,
-          "height": 540,
+          "height": 732,
           "fps": 15.0,
-          "frame_count": 193,
-          "duration_seconds": 12.866667,
-          "size_bytes": 476246
+          "frame_count": 199,
+          "duration_seconds": 13.266667,
+          "size_bytes": 604735
         }
       ]
     },
