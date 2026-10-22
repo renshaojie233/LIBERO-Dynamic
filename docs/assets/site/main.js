@@ -20,12 +20,6 @@ function selectTab(tabs, index) {
     tab.tabIndex = i === index ? 0 : -1;
   });
 }
-const resultTabs = [...document.querySelectorAll('.result-tabs button')];
-const resultPanels = [...document.querySelectorAll('.result-card')];
-bindTabs(resultTabs, index => {
-  selectTab(resultTabs, index);
-  resultPanels.forEach((panel, i) => { panel.hidden = i !== index; });
-});
 const categories = JSON.parse(document.querySelector('#task-data').textContent);
 const categoryTabs = [...document.querySelectorAll('.category-card')];
 const taskSelect = document.querySelector('#task-select');
@@ -41,6 +35,7 @@ function showTask(index) {
   taskVideo.poster = task.poster;
   taskVideo.setAttribute('aria-label', task.name);
   taskVideo.load();
+  taskVideo.play().catch(() => {});
   taskSelect.value = String(taskIndex);
   document.querySelector('#task-name').textContent = task.name;
   document.querySelector('#task-kicker').textContent = task.kicker;
@@ -58,11 +53,12 @@ taskSelect.addEventListener('change', () => showTask(Number(taskSelect.value)));
 document.querySelector('#previous-task').addEventListener('click', () => showTask(taskIndex - 1));
 document.querySelector('#next-task').addEventListener('click', () => showTask(taskIndex + 1));
 showCategory(0);
-// Playback is opt-in; only one clip runs at a time.
+// Muted inline autoplay lets every displayed demo play independently.
 const videos = [...document.querySelectorAll('video')];
-videos.forEach(video => video.addEventListener('play', () => {
-  videos.forEach(other => { if (other !== video) other.pause(); });
-}));
+videos.forEach(video => {
+  video.muted = true;
+  video.play().catch(() => {});
+});
 document.querySelectorAll('.real-playlist').forEach(video => {
   const playlist = JSON.parse(video.dataset.playlist);
   const card = video.closest('.real-card');
@@ -79,13 +75,12 @@ document.querySelectorAll('.real-playlist').forEach(video => {
     video.load();
     if (resume) video.play().catch(() => {});
   };
-  if (select) select.addEventListener('change', () => show(Number(select.value), false));
+  if (select) select.addEventListener('change', () => show(Number(select.value), true));
   video.addEventListener('ended', () => show((index + 1) % playlist.length, true));
 });
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (!entry.isIntersecting) entry.target.pause(); });
-}, {threshold: 0});
-videos.forEach(video => observer.observe(video));
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) videos.forEach(video => video.pause());
+  videos.forEach(video => {
+    if (document.hidden) video.pause();
+    else video.play().catch(() => {});
+  });
 });

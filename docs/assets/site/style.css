@@ -7,3 +7,9 @@
 .result-tabs button:hover{background:transparent;color:var(--accent)}
 #results .release-note{max-width:816px;margin:20px auto 0;font-size:11px;color:#74828a}
 @media(max-width:640px){.result-tabs{gap:18px}.result-tabs button{font-size:11px;padding:9px 0}.result-copy h3{font-size:14px}#results .release-note{margin-top:12px}}
+
+/* All results are readable without a tab selection. */
+.results-grid{display:grid;gap:36px}
+.result-card{width:100%}
+.result-card+.result-card{border-top:1px solid var(--line);padding-top:24px}
+@media(max-width:640px){.results-grid{gap:24px}.result-card+.result-card{padding-top:16px}}
