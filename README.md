@@ -5,6 +5,7 @@
 ### Benchmarking Robotic Manipulation in Dynamic Environments
 
 [![Project Page](https://img.shields.io/badge/Project-Page-2f6f9f)](https://renshaojie233.github.io/LIBERO-Dynamic/)
+[![Paper](https://img.shields.io/badge/Paper-arXiv%3A2610.24579-b31b1b)](https://arxiv.org/abs/2610.24579)
 [![Benchmark](https://img.shields.io/badge/Benchmark-40_tasks-4b8b6b)](#benchmark)
 [![Episodes](https://img.shields.io/badge/Evaluation-1%2C800_per_configuration-8a5fa8)](#released-results)
 [![License](https://img.shields.io/badge/License-MIT-black)](LICENSE)
