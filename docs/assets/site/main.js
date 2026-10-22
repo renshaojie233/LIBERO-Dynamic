@@ -20,6 +20,41 @@ function selectTab(tabs, index) {
     tab.tabIndex = i === index ? 0 : -1;
   });
 }
+// Initialize media before any task source is loaded. WebKit needs both the
+// muted attribute and property, and may defer offscreen autoplay until visible.
+const videos = [...document.querySelectorAll('video')];
+function startVideo(video) {
+  if (document.hidden || video.error || !video.paused) return;
+  video.muted = true;
+  video.defaultMuted = true;
+  const request = video.play();
+  if (request) request.catch(error => {
+    if (error.name !== 'AbortError') video.dataset.playbackError = error.name;
+  });
+}
+videos.forEach(video => {
+  video.muted = true;
+  video.defaultMuted = true;
+  video.autoplay = true;
+  video.playsInline = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+  video.setAttribute('webkit-playsinline', '');
+  video.addEventListener('canplay', () => startVideo(video));
+  video.addEventListener('playing', () => { delete video.dataset.playbackError; });
+});
+const playbackObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) startVideo(entry.target); });
+}, {threshold: 0.01});
+videos.forEach(video => playbackObserver.observe(video));
+window.addEventListener('pageshow', () => videos.forEach(startVideo));
+// If the browser requires a gesture, any normal page interaction retries media.
+document.addEventListener('pointerup', event => {
+  if (!event.target.closest('video')) videos.forEach(startVideo);
+});
+document.addEventListener('keydown', event => {
+  if (!event.target.closest('video')) videos.forEach(startVideo);
+});
 const categories = JSON.parse(document.querySelector('#task-data').textContent);
 const categoryTabs = [...document.querySelectorAll('.category-card')];
 const taskSelect = document.querySelector('#task-select');
@@ -35,7 +70,7 @@ function showTask(index) {
   taskVideo.poster = task.poster;
   taskVideo.setAttribute('aria-label', task.name);
   taskVideo.load();
-  taskVideo.play().catch(() => {});
+  startVideo(taskVideo);
   taskSelect.value = String(taskIndex);
   document.querySelector('#task-name').textContent = task.name;
   document.querySelector('#task-kicker').textContent = task.kicker;
@@ -53,12 +88,7 @@ taskSelect.addEventListener('change', () => showTask(Number(taskSelect.value)));
 document.querySelector('#previous-task').addEventListener('click', () => showTask(taskIndex - 1));
 document.querySelector('#next-task').addEventListener('click', () => showTask(taskIndex + 1));
 showCategory(0);
-// Muted inline autoplay lets every displayed demo play independently.
-const videos = [...document.querySelectorAll('video')];
-videos.forEach(video => {
-  video.muted = true;
-  video.play().catch(() => {});
-});
+videos.forEach(startVideo);
 document.querySelectorAll('.real-playlist').forEach(video => {
   const playlist = JSON.parse(video.dataset.playlist);
   const card = video.closest('.real-card');
@@ -73,7 +103,7 @@ document.querySelectorAll('.real-playlist').forEach(video => {
     status.textContent = `Trial ${index + 1} / ${playlist.length}`;
     if (select) select.value = String(index);
     video.load();
-    if (resume) video.play().catch(() => {});
+    if (resume) startVideo(video);
   };
   if (select) select.addEventListener('change', () => show(Number(select.value), true));
   video.addEventListener('ended', () => show((index + 1) % playlist.length, true));
@@ -81,6 +111,6 @@ document.querySelectorAll('.real-playlist').forEach(video => {
 document.addEventListener('visibilitychange', () => {
   videos.forEach(video => {
     if (document.hidden) video.pause();
-    else video.play().catch(() => {});
+    else startVideo(video);
   });
 });

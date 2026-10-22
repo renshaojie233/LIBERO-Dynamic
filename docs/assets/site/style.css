@@ -13,3 +13,8 @@
 .result-card{width:100%}
 .result-card+.result-card{border-top:1px solid var(--line);padding-top:24px}
 @media(max-width:640px){.results-grid{gap:24px}.result-card+.result-card{padding-top:16px}}
+
+.result-copy{grid-template-columns:210px minmax(0,1fr);column-gap:28px;padding-top:20px}
+.result-analysis p+p{margin-top:10px}
+.overview-figure figcaption{max-width:720px;margin:14px auto 0;line-height:1.8}
+@media(max-width:720px){.result-copy{display:block}.result-analysis{margin-top:10px}.result-copy .figure-hint{display:block;margin-top:12px}}
