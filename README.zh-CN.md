@@ -36,6 +36,10 @@ LIBERO-Dynamic 在 LIBERO 全部 40 个任务上加入受控运动目标和模�
 
 动态数据微调实验表明，三个受测模型都能在至少一种训练配方下获得提升，但提升幅度与模型结构和训练配方有关。完整 K 扫描、执行策略和真机结果见 [`results/`](results/) 与[项目网页](https://renshaojie233.github.io/LIBERO-Dynamic/)。
 
+## 论文训练权重与数据
+
+论文使用的 9 个模型版本已合并到一个 [Hugging Face 模型仓库](https://huggingface.co/rsj2003/libero-dynamic-paper-models)。严格非评测的 1,800 条动态训练数据位于对应的 [Hugging Face 数据集仓库](https://huggingface.co/datasets/rsj2003/libero-dynamic-strict-nonbenchmark-1800)。具体的 9 个版本、训练配方、目录和夹爪约定见[发布清单](docs/paper_training_release.md)。
+
 ## 安装
 
 ```bash

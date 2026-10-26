@@ -81,6 +81,15 @@ Three model variants are evaluated with Async and RTC on conveyor handover, smoo
 
 The exact aggregates are available in [`results/`](results/). Curves connect measured points only; no interpolated values are released as observations.
 
+### Paper checkpoints and training data
+
+The nine model versions used by the training study are released together in
+one [Hugging Face model repository](https://huggingface.co/rsj2003/libero-dynamic-paper-models).
+The strict non-benchmark 1,800-episode training data is available in the
+corresponding [Hugging Face dataset repository](https://huggingface.co/datasets/rsj2003/libero-dynamic-strict-nonbenchmark-1800).
+See the [release index](docs/paper_training_release.md) for the nine model
+entries, training recipes, and data conventions.
+
 ## Installation
 
 ```bash
