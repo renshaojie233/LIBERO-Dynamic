@@ -1,20 +1,28 @@
 # Paper training release
 
 This page indexes the nine model versions used by the LIBERO-Dynamic training
-study and the strict non-benchmark training data used for fine-tuning. The
+study, the native single-frame FastWAM-Joint checkpoint used in the
+cross-model baseline, and the strict non-benchmark training data used for fine-tuning. The
 large files are hosted on Hugging Face; this repository contains the code,
 evaluation protocol, aggregate results, and this release index.
 
 ## Downloads
 
-- **All nine paper checkpoints:** [rsj2003/libero-dynamic-paper-models](https://huggingface.co/rsj2003/libero-dynamic-paper-models)
+- **Paper checkpoints and the additional native FastWAM-Joint baseline:** [rsj2003/libero-dynamic-paper-models](https://huggingface.co/rsj2003/libero-dynamic-paper-models)
 - **Strict non-benchmark 1,800-episode training data:** [rsj2003/libero-dynamic-strict-nonbenchmark-1800](https://huggingface.co/datasets/rsj2003/libero-dynamic-strict-nonbenchmark-1800)
 
 The model repository keeps all weights under one link. The dataset repository
 contains both the original π0.5/LeRobot representation and the gripper-fixed
 FastWAM representation of the same strict non-benchmark dynamic data.
 
-## Nine paper versions
+The additional native baseline is
+`fastwam_joint/original_single_frame/step_034720.pt`, paired with its
+`dataset_stats.json`. It is the original single-frame, `history=1` checkpoint
+used for the cross-model comparison. It is distinct from
+`fastwam_joint/single_frame/static_base/`, the 60K static base used in the
+dynamic-data training study.
+
+## Nine paper training versions
 
 | ID | Model family | Training recipe | Paper role | HF path |
 |---|---|---|---|---|
