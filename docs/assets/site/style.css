@@ -18,3 +18,6 @@
 .result-analysis p+p{margin-top:10px}
 .overview-figure figcaption{max-width:720px;margin:14px auto 0;line-height:1.8}
 @media(max-width:720px){.result-copy{display:block}.result-analysis{margin-top:10px}.result-copy .figure-hint{display:block;margin-top:12px}}
+
+.release-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.release-card{display:block;padding:20px 22px;border:1px solid var(--line);border-radius:9px;background:var(--soft);text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}.release-card:hover{border-color:#9bc7cc;transform:translateY(-2px)}.release-card h3{margin:5px 0 8px;font-size:18px}.release-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.release-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:650}.release-section .release-note{max-width:none;margin-top:16px}
+@media(max-width:640px){.release-grid{grid-template-columns:1fr}.release-card{padding:17px 18px}}

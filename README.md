@@ -83,10 +83,15 @@ The exact aggregates are available in [`results/`](results/). Curves connect mea
 
 ### Paper checkpoints and training data
 
-The nine model versions used by the training study are released together in
-one [Hugging Face model repository](https://huggingface.co/rsj2003/libero-dynamic-paper-models).
-The strict non-benchmark 1,800-episode training data is available in the
-corresponding [Hugging Face dataset repository](https://huggingface.co/datasets/rsj2003/libero-dynamic-strict-nonbenchmark-1800).
+The public release keeps the two large downloads in Hugging Face and keeps
+the GitHub repository focused on code, evaluation, results, and documentation:
+
+1. **All nine paper checkpoints:** [Hugging Face model repository](https://huggingface.co/rsj2003/libero-dynamic-paper-models)
+2. **Strict non-benchmark training data:** [Hugging Face dataset repository](https://huggingface.co/datasets/rsj2003/libero-dynamic-strict-nonbenchmark-1800)
+
+The dataset contains 1,800 training episodes and the model repository contains
+the nine versions used in the paper; neither download is duplicated in this
+GitHub repository.
 See the [release index](docs/paper_training_release.md) for the nine model
 entries, training recipes, and data conventions.
 
