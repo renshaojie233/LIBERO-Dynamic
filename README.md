@@ -16,6 +16,13 @@ LIBERO-Dynamic is a latency-aware dynamic manipulation benchmark built on all 40
 
 <p align="center"><img src="docs/assets/figures/fig_overview.png" width="96%" alt="LIBERO-Dynamic overview"></p>
 
+### Downloads
+
+- **[9 paper model checkpoints](https://huggingface.co/rsj2003/libero-dynamic-paper-models)**
+- **[Strict non-benchmark training data](https://huggingface.co/datasets/rsj2003/libero-dynamic-strict-nonbenchmark-1800)**
+
+The large files are hosted on Hugging Face; this GitHub repository contains the code, evaluation protocol, results, and documentation.
+
 ## Highlights
 
 - **Broad controlled coverage:** 40 tasks, three motion families, three speed tiers, and a shared 1,800-episode population for every evaluated configuration.
