@@ -239,11 +239,6 @@
       "sha256": "8ce09c836a3000793043586b33eacb176e3edf6f102e469ad1c52e0ff2c4e828"
     },
     {
-      "path": "src/fastwam/runtime.py.pre_rank0_config_fix_20260831",
-      "size_bytes": 24230,
-      "sha256": "0eb725d626359c9efb1c3f3ab721ccafb586e7376d202b7873ee651257126897"
-    },
-    {
       "path": "src/fastwam/trainer.py",
       "size_bytes": 40157,
       "sha256": "0c2d91be42043805a15f782c76d4bab124c93c7f945a1ef9729f422720a54ba0"
