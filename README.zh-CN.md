@@ -39,6 +39,7 @@ LIBERO-Dynamic 在 LIBERO 全部 40 个任务上加入受控运动目标和模�
 ## 论文训练权重与数据
 
 论文使用的 9 个训练版本，以及跨模型对比所用的原生单帧 FastWAM-Joint 基线，已合并到一个 [Hugging Face 模型仓库](https://huggingface.co/rsj2003/libero-dynamic-paper-models)。严格非评测的 1,800 条动态训练数据位于对应的 [Hugging Face 数据集仓库](https://huggingface.co/datasets/rsj2003/libero-dynamic-strict-nonbenchmark-1800)。具体的 9 个训练版本、额外基线、训练配方、目录和夹爪约定见[发布清单](docs/paper_training_release.md)。
+历史帧 Joint 的模型、数据加载器、配置，以及五帧观测和前 16 个执行动作的推理适配器，见[`supplementary/history_frame_fastwam/`](supplementary/history_frame_fastwam/)。
 
 ## 安装
 

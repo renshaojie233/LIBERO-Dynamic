@@ -1,0 +1,297 @@
+{
+  "package": "history_frame_fastwam",
+  "source_training_root": "/home/dataset-local/rsj/training/fastwam-ft-continue-20260914/code",
+  "aligned_adapter_source": "/home/dataset-local/rsj/libero-dynamic-eval-workspace/runs/fastwam_joint_histft3000_async_k5-k10_tianyi_20260922/code_snapshot/serve_fastwam_joint_openpi_ws.py",
+  "files": [
+    {
+      "path": "configs/data/libero_2cam.yaml",
+      "size_bytes": 2443,
+      "sha256": "5c7acddfc7ea0dc7dbe51724e2c0eaadb465f0d6b2e466db4ec1395e1eabfc38"
+    },
+    {
+      "path": "configs/data/libero_dynamic_gripperfixed.yaml",
+      "size_bytes": 2529,
+      "sha256": "1d4750744f1b375e85f6e486cb6a67b5c066e730de25e06ef2d70e1af763c689"
+    },
+    {
+      "path": "configs/data/libero_mixed_gripperfixed.yaml",
+      "size_bytes": 3114,
+      "sha256": "b816b4bc314f33a47d8beac4c1d0d54ed8227835069cbc42d592e146363d9e64"
+    },
+    {
+      "path": "configs/model/fastwam_joint.yaml",
+      "size_bytes": 1531,
+      "sha256": "5ad77339352b4e932e92293de5c5147f369c1ca8f2ce03859bdf9f627c608c3a"
+    },
+    {
+      "path": "configs/sim_libero.yaml",
+      "size_bytes": 1076,
+      "sha256": "c5b60228495987739fd222d620e9a643d9d527d44e2e63c0832c403041931df3"
+    },
+    {
+      "path": "configs/task/libero_joint_2cam224_history5_dense4_fixed3latent_clean16_1e-4.yaml",
+      "size_bytes": 1002,
+      "sha256": "c4039615c38198cb13c607865e53766a63ce12541530c302f905735a8c540d3f"
+    },
+    {
+      "path": "configs/task/libero_joint_2cam224_history5_dense4_fixed3latent_clean16_sdpfuture_1e-4.yaml",
+      "size_bytes": 1166,
+      "sha256": "e4d89d7c0320ae0c20804c8f21651f2ac434e6e6d0ba933fd26c5896874068fe"
+    },
+    {
+      "path": "configs/train.yaml",
+      "size_bytes": 697,
+      "sha256": "42a60765bfdd842af01aacdde6066ce63be00698377fe7729110b795be684016"
+    },
+    {
+      "path": "serve_fastwam_joint_history_frame_openpi_ws.py",
+      "size_bytes": 15850,
+      "sha256": "ba396bb5469b5ccf7aa387840fcb09de482cc65bf76ff8fc98457d795db65681"
+    },
+    {
+      "path": "src/fastwam/__init__.py",
+      "size_bytes": 23,
+      "sha256": "c4149c5ff0f9abd1517360daf761e692feb8570eb7a0caa2dfde52d4412c3e23"
+    },
+    {
+      "path": "src/fastwam/datasets/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/fastwam/datasets/dataset_utils.py",
+      "size_bytes": 3735,
+      "sha256": "3bc17590049c7cb54061acf8d731b07892e7f530c5d7eeac2613fa77a285a392"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/base_lerobot_dataset.py",
+      "size_bytes": 18924,
+      "sha256": "d2afbcd42f5ed57c90d4e8564fdb0f177b5eb2141080bae88daf691a3dd9e05f"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/constants.py",
+      "size_bytes": 1915,
+      "sha256": "11ac9260341e1560c5eb0dd7acb79ed63c74180b8ab4113c27622ff213db417f"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/lerobot/datasets/compute_stats.py",
+      "size_bytes": 7067,
+      "sha256": "7d7daab219332b5abdfd5ec67ccaf3502e8eb583a17a4e482c3f3d4f7a691e89"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/lerobot/datasets/utils.py",
+      "size_bytes": 35535,
+      "sha256": "2ff8ea3e2ec4f28287a9b3013513afb24aaab911a1d1af7d47e132118873f744"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/lerobot/datasets/video_utils.py",
+      "size_bytes": 19421,
+      "sha256": "cb647a1e955c3279e39ce8d7af7a37ea7432bbd71534c183f9ceebc8557dd89f"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/lerobot/lerobot_dataset.py",
+      "size_bytes": 57757,
+      "sha256": "468c08cec01d1b3cdf6a58bfc30c9ed0fc529ffde0e4a6f8a09f604d8295e85e"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/processors/base_processor.py",
+      "size_bytes": 10811,
+      "sha256": "1f47bc85fee11e3d16714b2f1e3a2dc874f4609a1706a788617156d34b48b58e"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/processors/fastwam_processor.py",
+      "size_bytes": 13316,
+      "sha256": "d71bd147c6594ee9d1a50c04d22fa69ccb914d601c4ad816233496f5b583fda5"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/robot_video_dataset.py",
+      "size_bytes": 16772,
+      "sha256": "bade1f39d84a5340637ae4aada617a7cfe9c1df29b094afdaa10fa5dc7004394"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/transforms/action_state_merger.py",
+      "size_bytes": 2522,
+      "sha256": "669d6991415fc5eca44b32b129d15fee1e06e2f17d59d90350c252598033b427"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/transforms/image.py",
+      "size_bytes": 725,
+      "sha256": "4d7ab61d0844918525244db653831f0f632730046b2714a6163ff57c441a16fa"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/transforms/misc.py",
+      "size_bytes": 422,
+      "sha256": "8b505bd9e3a54ab2db7efcd64f0929d2e0303f5db1123de1074fd01fa9887e2b"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/transforms/relative_action.py",
+      "size_bytes": 4032,
+      "sha256": "e555e0558e948c4eea3d1119e274fa5d923af30862eec4380fb8528f4a319c47"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/transforms/rotation.py",
+      "size_bytes": 5603,
+      "sha256": "0de34b252d60b956cda07c0c19baebbd3c8a28916face700c6664c5815e11e91"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/utils/normalizer.py",
+      "size_bytes": 11274,
+      "sha256": "5ac89a646cd6395e98feaa832f8fdf7c7e00857080af3d9c15710e243c43ad43"
+    },
+    {
+      "path": "src/fastwam/datasets/lerobot/utils/rotation.py",
+      "size_bytes": 21110,
+      "sha256": "6169162f98faf02a3fe5201e2b8a1069fe299840d036ee7cad8af5fa8f561542"
+    },
+    {
+      "path": "src/fastwam/models/__init__.py",
+      "size_bytes": 35,
+      "sha256": "ae4c5733f4bbf7caf31df2ae6f789516f6a10cd84a321f7d0375a7034253ac6d"
+    },
+    {
+      "path": "src/fastwam/models/wan22/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/fastwam/models/wan22/action_dit.py",
+      "size_bytes": 13942,
+      "sha256": "795ddfae21e3d7c8f2c38e9a3afea725964e50ed782f356b590b291bcd1a2cad"
+    },
+    {
+      "path": "src/fastwam/models/wan22/fastwam.py",
+      "size_bytes": 63898,
+      "sha256": "6b9e4c22f570b38eb5f1e02f8ba3a91b7a6dfceec4c5b12eb840905302925811"
+    },
+    {
+      "path": "src/fastwam/models/wan22/fastwam_idm.py",
+      "size_bytes": 20427,
+      "sha256": "aae332d17645a6744aafd85edde8e8d7dacbb8b110de3988015ca330146c3c65"
+    },
+    {
+      "path": "src/fastwam/models/wan22/fastwam_joint.py",
+      "size_bytes": 11253,
+      "sha256": "fa558c3ad19f9e16b982382b216aa448a075b0aaac0dfd2e6b9d6646db2b1b99"
+    },
+    {
+      "path": "src/fastwam/models/wan22/fastwam_sdp_joint.py",
+      "size_bytes": 23734,
+      "sha256": "524944209c829a73e8b20df3a0a196789036f6e22b86ff7675ac29392d7f144a"
+    },
+    {
+      "path": "src/fastwam/models/wan22/helpers/__init__.py",
+      "size_bytes": 415,
+      "sha256": "f26116de229557a37a4812dc4ee75971f5f9e8b80240786ea4d0e5b0ff703cbf"
+    },
+    {
+      "path": "src/fastwam/models/wan22/helpers/gradient.py",
+      "size_bytes": 565,
+      "sha256": "ba5d8f7272eb029dc6cd2849ca99b70f6ad5abb838d21c818beb0590620dc793"
+    },
+    {
+      "path": "src/fastwam/models/wan22/helpers/io.py",
+      "size_bytes": 7751,
+      "sha256": "1c6c1bc8a975b47092912833194fce25e2e3ac886fbab72d73af3ff5a00b3c62"
+    },
+    {
+      "path": "src/fastwam/models/wan22/helpers/loader.py",
+      "size_bytes": 8279,
+      "sha256": "792f66bd0609c1365256aa24d43301340f81260c1651d89b04d2ae8224a08726"
+    },
+    {
+      "path": "src/fastwam/models/wan22/helpers/state_dict_converters.py",
+      "size_bytes": 5226,
+      "sha256": "81d213373e5056a8d8bf31768b9b04164138ea78d0b306e316334841499f4bf9"
+    },
+    {
+      "path": "src/fastwam/models/wan22/mot.py",
+      "size_bytes": 22134,
+      "sha256": "9f3f09cd73bf6e4547955336cb8a9055c5345f9dbabf06361ebf139b8d8accb5"
+    },
+    {
+      "path": "src/fastwam/models/wan22/schedulers/scheduler_continuous.py",
+      "size_bytes": 4068,
+      "sha256": "2ececce284f7b9fe876965fbf5e11ca7b69caaf693979266b0f63062a589f181"
+    },
+    {
+      "path": "src/fastwam/models/wan22/wan22.py",
+      "size_bytes": 16945,
+      "sha256": "b72998999b4b2c5096773092339b8ca81e9e7d96f398b81c57d3d22d14972ac4"
+    },
+    {
+      "path": "src/fastwam/models/wan22/wan_video_dit.py",
+      "size_bytes": 30915,
+      "sha256": "d098ad77665feeefa81634f31f5bb1d5771c4556d1a67859135f0ed35f9eb6c2"
+    },
+    {
+      "path": "src/fastwam/models/wan22/wan_video_text_encoder.py",
+      "size_bytes": 11459,
+      "sha256": "aedf7f131556a39b99a273deec3a85d67f41b5367cef41f310f33a807ae60a87"
+    },
+    {
+      "path": "src/fastwam/models/wan22/wan_video_vae.py",
+      "size_bytes": 50058,
+      "sha256": "31b3fb9f844a76f5db5af4854e14802aae640b85b61d0de03a4b53b52515abb7"
+    },
+    {
+      "path": "src/fastwam/runtime.py",
+      "size_bytes": 24393,
+      "sha256": "8ce09c836a3000793043586b33eacb176e3edf6f102e469ad1c52e0ff2c4e828"
+    },
+    {
+      "path": "src/fastwam/runtime.py.pre_rank0_config_fix_20260831",
+      "size_bytes": 24230,
+      "sha256": "0eb725d626359c9efb1c3f3ab721ccafb586e7376d202b7873ee651257126897"
+    },
+    {
+      "path": "src/fastwam/trainer.py",
+      "size_bytes": 40157,
+      "sha256": "0c2d91be42043805a15f782c76d4bab124c93c7f945a1ef9729f422720a54ba0"
+    },
+    {
+      "path": "src/fastwam/utils/__init__.py",
+      "size_bytes": 96,
+      "sha256": "2893c05b99b17162941c70a41859c2808f8ae390be367a26cac7d5ab93ee197b"
+    },
+    {
+      "path": "src/fastwam/utils/config_resolvers.py",
+      "size_bytes": 2526,
+      "sha256": "01c48cbd42b86e636b70ccc3e193a81147162ba890777102b2c61086fa415340"
+    },
+    {
+      "path": "src/fastwam/utils/fs.py",
+      "size_bytes": 76,
+      "sha256": "69e6df236b43360428a613686c8f37c531c0d16a3a2c5b06a725c46b49d657c5"
+    },
+    {
+      "path": "src/fastwam/utils/logging_config.py",
+      "size_bytes": 4679,
+      "sha256": "cadc4f6ad487c3f37171a6defad36d23d9ab8bf262f73a461cd9ee9b03b757e7"
+    },
+    {
+      "path": "src/fastwam/utils/misc.py",
+      "size_bytes": 1223,
+      "sha256": "05aa51247936a8d3faac27f90b78b65ff83a688259bed55d114b6a617ced532d"
+    },
+    {
+      "path": "src/fastwam/utils/pytorch_utils.py",
+      "size_bytes": 5049,
+      "sha256": "ffc483e7fb435cd654326750eaffdbfc9243837c3140dcc74e45b24abb751a33"
+    },
+    {
+      "path": "src/fastwam/utils/samplers.py",
+      "size_bytes": 1339,
+      "sha256": "4d3bd9b2d498f4ad8f2cf9765d60c4bf5368fa6fa2a7d42d0db6210f66899652"
+    },
+    {
+      "path": "src/fastwam/utils/video_io.py",
+      "size_bytes": 819,
+      "sha256": "9e9898b021a44e87aa1b4e6d13e3755a9869a2e27a7eb53c72a6802808d5bd80"
+    },
+    {
+      "path": "src/fastwam/utils/video_metrics.py",
+      "size_bytes": 3446,
+      "sha256": "aaa37e458cc9e4bb79a17923b5ff5900c97b4309f7abd50db44cf76e9143ffd6"
+    }
+  ]
+}

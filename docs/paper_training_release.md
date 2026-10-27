@@ -22,6 +22,13 @@ used for the cross-model comparison. It is distinct from
 `fastwam_joint/single_frame/static_base/`, the 60K static base used in the
 dynamic-data training study.
 
+The history-frame reproduction package is included at
+[`supplementary/history_frame_fastwam/`](../supplementary/history_frame_fastwam/). It
+contains the model and Joint implementation, the history-aware LeRobot loader,
+the trainer/runtime snapshot, exact task/data/model configurations, and the
+aligned websocket adapter. The adapter consumes five observations and the
+preceding 16 executed actions as the clean action prefix.
+
 ## Nine paper training versions
 
 | ID | Model family | Training recipe | Paper role | HF path |

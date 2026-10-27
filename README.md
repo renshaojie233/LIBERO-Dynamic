@@ -101,7 +101,10 @@ the nine training versions used in the paper plus the native single-frame
 baseline; neither download is duplicated in this
 GitHub repository.
 See the [release index](docs/paper_training_release.md) for the nine model
-entries, training recipes, and data conventions.
+entries, the additional native baseline, training recipes, and data conventions.
+The exact history-frame model/loader/configuration and five-observation plus
+16-executed-action adapter are included in
+[`supplementary/history_frame_fastwam/`](supplementary/history_frame_fastwam/).
 
 ## Installation
 

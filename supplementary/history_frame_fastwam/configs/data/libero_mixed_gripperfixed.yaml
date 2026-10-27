@@ -1,0 +1,72 @@
+# Mixed dynamic + static, with the dynamic half's gripper converted to the
+# static LeRobot convention so both halves agree:  g_train = (1 - g_env) / 2
+#
+# The earlier mixed run merged the two conventions under one shared min/max
+# normalizer.  Its gripper range came out as [-1, 1], which makes the scaling
+# the identity, so the contradiction reached the model untouched: the value +1
+# meant "open" in the static half and "close" in the dynamic half.
+train:
+  _target_: fastwam.datasets.lerobot.robot_video_dataset.RobotVideoDataset
+  dataset_dirs:
+    - /mnt/workspace/rsj/projects/pi05-libero-dynamic-strict-nonbenchmark-20260829/data/lerobot-v2.1-gripperfixed/libero_spatial
+    - /mnt/workspace/rsj/projects/pi05-libero-dynamic-strict-nonbenchmark-20260829/data/lerobot-v2.1-gripperfixed/libero_object
+    - /mnt/workspace/rsj/projects/pi05-libero-dynamic-strict-nonbenchmark-20260829/data/lerobot-v2.1-gripperfixed/libero_goal
+    - /mnt/workspace/rsj/projects/pi05-libero-dynamic-strict-nonbenchmark-20260829/data/lerobot-v2.1-gripperfixed/libero_10
+    - /mnt/data/rsj/data/libero-v3-repaired/libero_spatial_no_noops_lerobot
+    - /mnt/data/rsj/data/libero-v3-repaired/libero_object_no_noops_lerobot
+    - /mnt/data/rsj/data/libero-v3-repaired/libero_goal_no_noops_lerobot
+    - /mnt/data/rsj/data/libero-v3-repaired/libero_10_no_noops_lerobot
+  shape_meta:
+    images:
+      - key: image
+        raw_shape: [3, 256, 256]
+        shape: [3, 224, 224]
+      - key: wrist_image
+        raw_shape: [3, 256, 256]
+        shape: [3, 224, 224]
+    action:
+      - key: default
+        raw_shape: 7
+        shape: 7
+    state:
+      - key: default
+        raw_shape: 8
+        shape: 8
+  num_frames: 17
+  history_frame_stride: 1
+  num_history_frames: 5
+  future_action_horizon: 16
+  action_clean_prefix_steps: 16
+  global_sample_stride: 1
+  action_video_freq_ratio: 4
+  video_size: [224, 448]
+  camera_key: null
+  val_set_proportion: 0.0
+  is_training_set: true
+  skip_padding_as_possible: false
+  concat_multi_camera: horizontal
+  text_embedding_cache_dir: /mnt/workspace/rsj/projects/fastwam-79p36-exact-repro-20260826/code_exact_training_time/data/text_embeds_cache/libero
+  context_len: 128
+  processor:
+    _target_: fastwam.datasets.lerobot.processors.fastwam_processor.FastWAMProcessor
+    shape_meta: ${data.train.shape_meta}
+    num_obs_steps: ${data.train.num_frames}
+    num_output_cameras: 2
+    action_output_dim: 7
+    proprio_output_dim: 8
+    delta_action_dim_mask:
+      default: [true, true, true, true, true, true, false]
+    action_state_transforms: null
+    use_stepwise_action_norm: false
+    norm_default_mode: min/max
+    norm_exception_mode: null
+    action_state_merger:
+      _target_: fastwam.datasets.lerobot.transforms.action_state_merger.ConcatLeftAlign
+    train_transforms:
+      - _target_: fastwam.datasets.lerobot.transforms.image.ToTensor
+      - _target_: torchvision.transforms.Resize
+        size: [224, 224]
+    val_transforms:
+      - _target_: fastwam.datasets.lerobot.transforms.image.ToTensor
+      - _target_: torchvision.transforms.Resize
+        size: [224, 224]
