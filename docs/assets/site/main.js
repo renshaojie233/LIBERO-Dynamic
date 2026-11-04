@@ -24,7 +24,7 @@ function selectTab(tabs, index) {
 // muted attribute and property, and may defer offscreen autoplay until visible.
 const videos = [...document.querySelectorAll('video')];
 function startVideo(video) {
-  if (document.hidden || video.error || !video.paused) return;
+  if (document.hidden || video.error || !video.paused || video.dataset.userPaused === 'true') return;
   video.muted = true;
   video.defaultMuted = true;
   const request = video.play();
@@ -32,10 +32,37 @@ function startVideo(video) {
     if (error.name !== 'AbortError') video.dataset.playbackError = error.name;
   });
 }
+const heroVideo = document.querySelector('#dataset-showcase-video');
+const heroToggle = document.querySelector('#hero-playback-toggle');
+if (heroVideo && heroToggle) {
+  const updateHeroToggle = () => {
+    const paused = heroVideo.paused;
+    heroToggle.textContent = paused ? 'Play ▷' : 'Pause Ⅱ';
+    heroToggle.setAttribute('aria-label', paused ? 'Play background video' : 'Pause background video');
+  };
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.dataset.userPaused = 'true';
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.pause();
+  }
+  heroToggle.addEventListener('click', () => {
+    if (heroVideo.paused) {
+      delete heroVideo.dataset.userPaused;
+      startVideo(heroVideo);
+    } else {
+      heroVideo.dataset.userPaused = 'true';
+      heroVideo.pause();
+    }
+    updateHeroToggle();
+  });
+  heroVideo.addEventListener('play', updateHeroToggle);
+  heroVideo.addEventListener('pause', updateHeroToggle);
+  updateHeroToggle();
+}
 videos.forEach(video => {
   video.muted = true;
   video.defaultMuted = true;
-  video.autoplay = true;
+  video.autoplay = video.dataset.userPaused !== 'true';
   video.playsInline = true;
   video.setAttribute('muted', '');
   video.setAttribute('playsinline', '');
