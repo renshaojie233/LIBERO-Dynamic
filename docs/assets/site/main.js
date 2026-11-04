@@ -22,7 +22,7 @@ function selectTab(tabs, index) {
 }
 // Initialize media before any task source is loaded. WebKit needs both the
 // muted attribute and property, and may defer offscreen autoplay until visible.
-const videos = [...document.querySelectorAll('video')];
+const videos = [...document.querySelectorAll('video:not(#task-dialog-video)')];
 function startVideo(video) {
   if (document.hidden || video.error || !video.paused || video.dataset.userPaused === 'true') return;
   video.muted = true;
@@ -84,37 +84,98 @@ document.addEventListener('keydown', event => {
 });
 const categories = JSON.parse(document.querySelector('#task-data').textContent);
 const categoryTabs = [...document.querySelectorAll('.category-card')];
-const taskSelect = document.querySelector('#task-select');
-const taskVideo = document.querySelector('#task-video');
-let categoryIndex = 0;
-let taskIndex = 0;
-function showTask(index) {
-  const tasks = categories[categoryIndex].tasks;
-  taskIndex = (index + tasks.length) % tasks.length;
-  const task = tasks[taskIndex];
-  taskVideo.pause();
-  taskVideo.src = task.src;
-  taskVideo.poster = task.poster;
-  taskVideo.setAttribute('aria-label', task.name);
-  taskVideo.load();
-  startVideo(taskVideo);
-  taskSelect.value = String(taskIndex);
-  document.querySelector('#task-name').textContent = task.name;
-  document.querySelector('#task-kicker').textContent = task.kicker;
-  document.querySelector('#task-position').textContent = `${taskIndex + 1} / ${tasks.length}`;
+const taskPanel = document.querySelector('#task-panel');
+const galleryToggle = document.querySelector('#gallery-playback');
+const taskDialog = document.querySelector('#task-dialog');
+const dialogVideo = document.querySelector('#task-dialog-video');
+let galleryPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let galleryVideos = [];
+function playGalleryVideo(video) {
+  if (!galleryPaused && !taskDialog.open && video.dataset.visible === 'true') startVideo(video);
 }
+const galleryObserver = new IntersectionObserver(entries => {
+  entries.forEach(({target: video, isIntersecting}) => {
+    video.dataset.visible = String(isIntersecting);
+    if (isIntersecting) {
+      if (!video.getAttribute('src')) { video.src = video.dataset.src; video.load(); }
+      playGalleryVideo(video);
+    } else video.pause();
+  });
+}, {threshold: 0.1});
+function updateGalleryToggle() {
+  galleryToggle.textContent = galleryPaused ? 'Play demos' : 'Pause demos';
+  galleryToggle.setAttribute('aria-pressed', String(galleryPaused));
+}
+galleryToggle.addEventListener('click', () => {
+  galleryPaused = !galleryPaused;
+  galleryVideos.forEach(video => galleryPaused ? video.pause() : playGalleryVideo(video));
+  updateGalleryToggle();
+});
+function openTask(task) {
+  document.querySelector('#task-dialog-title').textContent = task.name;
+  document.querySelector('#task-dialog-kicker').textContent = task.kicker;
+  dialogVideo.poster = task.poster;
+  dialogVideo.src = task.src;
+  dialogVideo.setAttribute('aria-label', task.name);
+  taskDialog.showModal();
+  galleryVideos.forEach(video => video.pause());
+  dialogVideo.load();
+  startVideo(dialogVideo);
+}
+document.querySelector('#task-dialog-close').addEventListener('click', () => taskDialog.close());
+taskDialog.addEventListener('click', event => { if (event.target === taskDialog) taskDialog.close(); });
+taskDialog.addEventListener('close', () => {
+  dialogVideo.pause();
+  dialogVideo.removeAttribute('src');
+  dialogVideo.load();
+  galleryVideos.forEach(playGalleryVideo);
+});
 function showCategory(index) {
-  categoryIndex = index;
+  galleryVideos.forEach(video => {
+    galleryObserver.unobserve(video);
+    video.pause(); video.removeAttribute('src'); video.load();
+  });
+  galleryVideos = [];
   selectTab(categoryTabs, index);
-  document.querySelector('#task-panel').setAttribute('aria-labelledby', categoryTabs[index].id);
-  taskSelect.replaceChildren(...categories[index].tasks.map((task, i) => new Option(`${String(i + 1).padStart(2, '0')} · ${task.name}`, String(i))));
-  showTask(0);
+  taskPanel.setAttribute('aria-labelledby', categoryTabs[index].id);
+  taskPanel.replaceChildren(...categories[index].tasks.map(task => {
+    const card = document.createElement('article');
+    card.className = 'task-card';
+    const preview = document.createElement('button');
+    preview.type = 'button'; preview.className = 'task-preview';
+    preview.setAttribute('aria-label', `Expand demo: ${task.name}`);
+    const video = document.createElement('video');
+    video.dataset.src = task.src; video.poster = task.poster;
+    video.loop = true; video.muted = true; video.defaultMuted = true; video.playsInline = true;
+    video.preload = 'none'; video.setAttribute('muted', ''); video.setAttribute('playsinline', '');
+    video.setAttribute('aria-hidden', 'true');
+    video.addEventListener('canplay', () => playGalleryVideo(video));
+    const expand = document.createElement('span');
+    expand.className = 'task-expand'; expand.textContent = '↗'; expand.setAttribute('aria-hidden', 'true');
+    preview.append(video, expand);
+    preview.addEventListener('click', () => openTask(task));
+    const details = document.createElement('div'); details.className = 'task-card-details';
+    const meta = document.createElement('div'); meta.className = 'task-card-meta';
+    const [id, motion] = task.kicker.split(' · ');
+    const number = document.createElement('span'); number.textContent = id;
+    const badge = document.createElement('span'); badge.textContent = motion;
+    badge.className = 'motion-badge'; badge.dataset.motion = motion.toLowerCase();
+    meta.append(number, badge);
+    const title = document.createElement('h3'); title.textContent = task.name;
+    details.append(meta, title); card.append(preview, details);
+    galleryVideos.push(video); galleryObserver.observe(video);
+    return card;
+  }));
 }
 bindTabs(categoryTabs, showCategory);
-taskSelect.addEventListener('change', () => showTask(Number(taskSelect.value)));
-document.querySelector('#previous-task').addEventListener('click', () => showTask(taskIndex - 1));
-document.querySelector('#next-task').addEventListener('click', () => showTask(taskIndex + 1));
 showCategory(0);
+updateGalleryToggle();
+document.addEventListener('visibilitychange', () => {
+  galleryVideos.forEach(video => document.hidden ? video.pause() : playGalleryVideo(video));
+  if (document.hidden) dialogVideo.pause();
+  else if (taskDialog.open) startVideo(dialogVideo);
+});
+document.addEventListener('pointerup', () => galleryVideos.forEach(playGalleryVideo));
 videos.forEach(startVideo);
 document.querySelectorAll('.real-playlist').forEach(video => {
   const playlist = JSON.parse(video.dataset.playlist);
