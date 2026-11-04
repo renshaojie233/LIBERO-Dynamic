@@ -8,7 +8,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>LIBERO-Dynamic: Benchmarking Robotic Manipulation in Dynamic Environments | Official Project</title>
 
-<meta content="A benchmark for robot manipulation with moving objects and inference latency. Explore 40 LIBERO tasks, execution strategies, and dynamic training data." name="description"/><link href="assets/site/style.css?v=20261022-3" rel="stylesheet"/>
+<meta content="A benchmark for robot manipulation with moving objects and inference latency. Explore 40 LIBERO tasks, execution strategies, and dynamic training data." name="description"/><link href="assets/site/style.css?v=20261105-showcase" rel="stylesheet"/>
 <link rel="canonical" href="https://renshaojie233.github.io/LIBERO-Dynamic/"/>
 <link rel="sitemap" type="application/xml" href="sitemap.xml"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
@@ -58,7 +58,13 @@
 <div class="stat"><strong>1,800</strong><span>episodes / setting</span></div>
 <div class="stat"><strong>9,000</strong><span>dynamic demos</span></div>
 <div class="stat"><strong>6</strong><span>pretrained policies</span></div>
-</div></section><figure class="overview-figure"><img alt="Overview of LIBERO-Dynamic" loading="lazy" src="assets/figures/fig_overview.png"/><figcaption>Object motion and inference latency, evaluated together. Contact-driven target motion continues during the calibrated inference delay, allowing execution and training choices to be compared under shared dynamic conditions.</figcaption></figure>
+</div></section>
+<figure class="dataset-showcase" aria-labelledby="showcase-title">
+<div class="showcase-heading"><h2 id="showcase-title">40 tasks, brought into motion</h2><a href="#simulation">Explore individual tasks ↓</a></div>
+<video id="dataset-showcase-video" autoplay muted loop playsinline controls preload="auto" poster="assets/site/posters/40-tasks-showcase.jpg" aria-label="Dynamic demonstrations across 40 LIBERO tasks, expanding from one task into a scrolling video wall"><source src="assets/videos/showcase/40-tasks-zoom-pan-slow.mp4" type="video/mp4"/>Your browser does not support embedded video. <a href="assets/videos/showcase/40-tasks-zoom-pan-slow.mp4">Download the showcase.</a></video>
+<figcaption>Dynamic demonstrations across all 40 tasks, with external and wrist-camera views shown side by side. Playback slowed for viewing.</figcaption>
+</figure>
+<figure class="overview-figure"><img alt="Overview of LIBERO-Dynamic" loading="lazy" src="assets/figures/fig_overview.png"/><figcaption>Object motion and inference latency, evaluated together. Contact-driven target motion continues during the calibrated inference delay, allowing execution and training choices to be compared under shared dynamic conditions.</figcaption></figure>
 <section aria-labelledby="results-title" id="results">
 <div class="section-head">
 <div><span class="section-number">01 / Findings</span><h2 id="results-title">Main results</h2></div>

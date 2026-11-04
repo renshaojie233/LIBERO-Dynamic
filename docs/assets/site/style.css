@@ -21,3 +21,12 @@
 
 .release-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.release-card{display:block;padding:20px 22px;border:1px solid var(--line);border-radius:9px;background:var(--soft);text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}.release-card:hover{border-color:#9bc7cc;transform:translateY(-2px)}.release-card h3{margin:5px 0 8px;font-size:18px}.release-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.release-label{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:650}.release-section .release-note{max-width:none;margin-top:16px}
 @media(max-width:640px){.release-grid{grid-template-columns:1fr}.release-card{padding:17px 18px}}
+
+/* A compact, immediately visible overview of the dynamic demonstrations. */
+.dataset-showcase{max-width:840px;margin:4px auto 44px}
+.showcase-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:14px}
+.showcase-heading h2{font-size:22px;letter-spacing:-.4px;margin:0}
+.showcase-heading a{font-size:12px;white-space:nowrap;text-decoration:none}
+.dataset-showcase video{aspect-ratio:16/9;object-fit:contain;border-radius:8px}
+.dataset-showcase figcaption{max-width:680px;margin:12px auto 0;line-height:1.7}
+@media(max-width:640px){.dataset-showcase{margin-bottom:30px}.showcase-heading{align-items:start;flex-direction:column;gap:6px}.showcase-heading h2{font-size:21px}}
