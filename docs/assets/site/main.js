@@ -25,6 +25,8 @@ function selectTab(tabs, index) {
 const videos = [...document.querySelectorAll('video:not(#task-dialog-video)')];
 function startVideo(video) {
   if (document.hidden || video.error || !video.paused || video.dataset.userPaused === 'true') return;
+  if (video.dataset.viewportManaged === 'true' && video.dataset.visible !== 'true') return;
+  if (!video.getAttribute('src') && !video.querySelector('source[src]')) return;
   video.muted = true;
   video.defaultMuted = true;
   const request = video.play();
@@ -62,7 +64,8 @@ if (heroVideo && heroToggle) {
 videos.forEach(video => {
   video.muted = true;
   video.defaultMuted = true;
-  video.autoplay = video.dataset.userPaused !== 'true';
+  video.dataset.viewportManaged = 'true';
+  video.autoplay = video === heroVideo && video.dataset.userPaused !== 'true';
   video.playsInline = true;
   video.setAttribute('muted', '');
   video.setAttribute('playsinline', '');
@@ -70,8 +73,25 @@ videos.forEach(video => {
   video.addEventListener('canplay', () => startVideo(video));
   video.addEventListener('playing', () => { delete video.dataset.playbackError; });
 });
+// Fetch lower-page media shortly before it is needed, not during hero startup.
+const mediaLoadObserver = new IntersectionObserver(entries => {
+  entries.forEach(({target: video, isIntersecting}) => {
+    if (!isIntersecting) return;
+    if (video.dataset.src && !video.getAttribute('src')) {
+      video.src = video.dataset.src;
+      video.preload = 'auto';
+      video.load();
+    }
+    mediaLoadObserver.unobserve(video);
+  });
+}, {rootMargin: '200px 0px', threshold: 0});
+videos.filter(video => video.dataset.src).forEach(video => mediaLoadObserver.observe(video));
 const playbackObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if (entry.isIntersecting) startVideo(entry.target); });
+  entries.forEach(({target: video, isIntersecting}) => {
+    video.dataset.visible = String(isIntersecting);
+    if (isIntersecting) startVideo(video);
+    else video.pause();
+  });
 }, {threshold: 0.01});
 videos.forEach(video => playbackObserver.observe(video));
 window.addEventListener('pageshow', () => videos.forEach(startVideo));
