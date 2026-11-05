@@ -1,6 +1,6 @@
 {
   "schema": "libero_dynamic_real_robot_video_examples_v1",
-  "source_note": "Only successful trials supplied for the supplementary material.",
+  "source_note": "Website examples: successful supplied pick-and-place trials and a continuous pi0.5 mole-hitting excerpt; per-clip provenance below.",
   "task_count": 4,
   "clip_count": 8,
   "transcode": "H.264, original aspect ratio, max width 960 px, CRF 24, no color grading",
@@ -134,22 +134,27 @@
       "task_sequence": 4,
       "task_key": "dynamic_mole_hitting",
       "task_title": "Dynamic Mole Hitting",
-      "success": true,
+      "success": null,
       "clip_count": 1,
       "clips": [
         {
           "clip_sequence": 1,
-          "source_filename": "hit_the_mole_success_01.mp4",
-          "source_sha256": "1e1ab3ad29732460a1fae4316560e4b11bba51141d1ae3bdcf8744952c53683d",
-          "package_file": "assets/videos/real_robot/04_dynamic_mole_hitting_trial_01.mp4",
-          "sha256": "52cd11107628c72e86aa52a9f926fca0b049e97207d29f0308643dfdc750e972",
+          "source_filename": "pi05/20260923T151134.381715Z_pi05-tracking-v3/camera_4.mp4",
+          "source_sha256": "0bc2c02655a2cad9dac2e89c1b904dbbf67387d4d63f7eaf4cbf7559adfc2470",
+          "package_file": "assets/videos/real_robot/04_dynamic_mole_hitting_pi05_20261105.mp4",
+          "sha256": "8078b7fa084b7f133249bd4a5d0fc024848fe4ef31bfc983e9bccdcc92b9429a",
           "codec": "h264",
           "width": 960,
           "height": 732,
           "fps": 15.0,
-          "frame_count": 360,
-          "duration_seconds": 24.0,
-          "size_bytes": 868593
+          "frame_count": 180,
+          "duration_seconds": 12.0,
+          "size_bytes": 1019000,
+          "source_start_seconds": 90,
+          "source_end_seconds": 102,
+          "model": "pi0.5",
+          "processing": "Continuous excerpt at original speed and 15 fps; center crop 1416x1080, resize 960x732; H.264 CRF 23, no interpolation.",
+          "outcome_note": "Continuous pressing demonstration; no binary episode success inferred."
         }
       ]
     }
